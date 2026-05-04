@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fallout 4 Commands</title>
 
+    <link rel="icon" type="image/x-icon" href="assets/images/fallouticon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<nav class="navbar navbar-dark bg-dark mb-4">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Men&uacute;</a>
+
+        <a class="navbar-brand" href="#">⚡ Fallout Tools</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
             <span class="navbar-toggler-icon"></span>
@@ -21,14 +24,22 @@
 
         <div class="collapse navbar-collapse" id="menuNav">
             <ul class="navbar-nav ms-auto">
+
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Comandos</a>
+                    <a class="nav-link" href="#">Principal</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/missions_info.html">Misiones repetidas</a>
+                    <a class="nav-link" href="pages/missions_info.html">Misiones</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/companions.html">Acompañantes</a>
+                </li>
+
             </ul>
         </div>
+
     </div>
 </nav>
 
@@ -43,7 +54,7 @@
     <div class="row">
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>Chapas</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 0000000f 10000')"></i>
                 <div class="command-text">player.additem 0000000f 10000</div>
@@ -51,7 +62,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>Nivel</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.setlevel X')"></i>
                 <div class="command-text">player.setlevel X</div>
@@ -59,7 +70,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>God Mode</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('tgm')"></i>
                 <div class="command-text">tgm</div>
@@ -71,7 +82,7 @@
     <div class="row">
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>XP</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.rewardxp 1000')"></i>
                 <div class="command-text">
@@ -81,7 +92,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>Curación</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.resethealth')"></i>
                 <div class="command-text">
@@ -91,7 +102,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>Peso infinito</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.modav carryweight 9999')"></i>
                 <div class="command-text">
@@ -200,7 +211,7 @@
     <div class="row">
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>.45</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 0001F66A 10000')"></i>
                 <div class="command-text">player.additem 0001F66A 10000</div>
@@ -208,7 +219,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>5.56</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 0001F278 10000')"></i>
                 <div class="command-text">player.additem 0001F278 10000</div>
@@ -216,7 +227,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>10 mm</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 0001F276 10000')"></i>
                 <div class="command-text">player.additem 0001F276 10000</div>
@@ -228,7 +239,7 @@
     <div class="row">
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>.308</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 0001F66B 10000')"></i>
                 <div class="command-text">player.additem 0001F66B 10000</div>
@@ -236,7 +247,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>Misiles</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000CABA3 100')"></i>
                 <div class="command-text">player.additem 000CABA3 100</div>
@@ -244,7 +255,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>Mini Nukes</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000E6B2E 10000')"></i>
                 <div class="command-text">player.additem 000E6B2E 10000</div>
@@ -256,7 +267,7 @@
     <div class="row">
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>Harpoon</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000E6B2F 1000')"></i>
                 <div class="command-text">player.additem 000E6B2F 1000</div>
@@ -264,7 +275,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>Gamma</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000DF279 1000')"></i>
                 <div class="command-text">player.additem 000DF279 1000</div>
@@ -272,7 +283,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="row-card-generals">
+            <div class="row-card">
                 <strong>Fusion Cells</strong>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000C1897 10000')"></i>
                 <div class="command-text">player.additem 000C1897 10000</div>
@@ -281,8 +292,9 @@
 
     </div>
 
+    <!-- MENSAJE EMERGENTE DE COPIADO -->
     <div id="copyToast" class="copy-toast">
-        <i class="bi bi-clipboard"></i> Copiado
+        <i class="bi bi-check-circle-fill"></i> Copiado
     </div>
 
     <!-- SCRIPT -->
