@@ -1,13 +1,13 @@
 body {
-    background: linear-gradient(
-        135deg,
-        #020617 0%,
-        #0a1a2f 40%,
-        #0f2a4d 70%,
-        #1b3f73 100%
-    );
-    color: #fff;
-    min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #020617 0%,
+    #0a1a2f 40%,
+    #0f2a4d 70%,
+    #1b3f73 100%
+  );
+  color: #fff;
+  min-height: 100vh;
 }
 
 .section-title {
@@ -16,10 +16,10 @@ body {
 }
 
 .section-bar {
-    height: 6px;
-    background: linear-gradient(90deg, #007bff, #00bfff);
-    border-radius: 10px;
-    margin-bottom: 20px;
+  height: 6px;
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .row-card {
@@ -56,81 +56,123 @@ body {
 
 /* MENSAJE EMERGENTE */
 .copy-toast {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 
-    background: rgba(40, 167, 69, 0.25); /* verde translúcido */
-    color: #ffffff;
+  background: rgba(40, 167, 69, 0.25); /* verde translúcido */
+  color: #ffffff;
 
-    padding: 10px 18px;
-    border-radius: 12px;
+  padding: 10px 18px;
+  border-radius: 12px;
 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
 
-    z-index: 9999;
+  z-index: 9999;
 }
 
 /* estado visible */
 .copy-toast.show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Espaciado del ícono */
 .copy-toast i {
-    margin-right: 6px;
+  margin-right: 6px;
 }
 
 /* NAVBAR GLASS */
 .navbar-custom {
-    background: rgba(255, 255, 255, 0.08) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-    border-radius: 18px;
-    margin: 10px auto;
-    padding: 10px 15px;
+  border-radius: 18px;
+  margin: 10px auto;
+  padding: 10px 15px;
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* LINKS */
 .navbar-custom .nav-link {
-    color: #fff !important;
-    opacity: 0.8;
-    transition: all 0.2s ease;
+  color: #fff !important;
+  opacity: 0.8;
+  transition: all 0.2s ease;
 }
 
 .navbar-custom .nav-link:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* LINK ACTIVO */
 .navbar-custom .nav-link.active {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 5px 10px;
 }
 
 /* BRAND */
 .navbar-custom .navbar-brand {
-    color: #fff !important;
-    font-weight: 600;
+  color: #fff !important;
+  font-weight: 600;
 }
 
 /* BOTÓN HAMBURGUESA */
 .navbar-custom .navbar-toggler {
-    border: none;
+  border: none;
+}
+
+.companion-img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover; /* recorta sin deformar */
+  object-position: center; /* centra la imagen */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0; /* evita que se achique en flex */
+}
+
+.modal-content {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+}
+
+.clickable-img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.clickable-img:hover {
+    transform: scale(1.1);
+}
+
+/* glass modal */
+.modal-glass {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* imagen más pequeña */
+.modal-img {
+    width: 50%;
+    max-width: 250px;
+    margin: 0 auto;
+    border-radius: 12px;
 }
