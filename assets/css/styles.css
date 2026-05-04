@@ -1,6 +1,13 @@
 body {
-  background: #000;
-  color: #fff;
+    background: linear-gradient(
+        135deg,
+        #020617 0%,
+        #0a1a2f 40%,
+        #0f2a4d 70%,
+        #1b3f73 100%
+    );
+    color: #fff;
+    min-height: 100vh;
 }
 
 .section-title {
@@ -9,24 +16,31 @@ body {
 }
 
 .section-bar {
-  height: 5px;
-  background: #007bff;
-  margin-bottom: 20px;
-  border-radius: 5px;
+    height: 6px;
+    background: linear-gradient(90deg, #007bff, #00bfff);
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .row-card {
-  background: #2b2b2b;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
   padding: 15px;
   margin-bottom: 15px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+  transition: all 0.2s ease;
 }
 
-.row-card-generals {
-  background: #2b2b2b;
-  border-radius: 12px;
-  padding: 15px;
-  margin-bottom: 15px;
+.row-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .copy-btn {
@@ -40,21 +54,83 @@ body {
   font-size: 0.95rem;
 }
 
+/* MENSAJE EMERGENTE */
 .copy-toast {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #28a745;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.3s ease;
-  z-index: 9999;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background: rgba(40, 167, 69, 0.25); /* verde translúcido */
+    color: #ffffff;
+
+    padding: 10px 18px;
+    border-radius: 12px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+
+    z-index: 9999;
 }
 
+/* estado visible */
 .copy-toast.show {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Espaciado del ícono */
+.copy-toast i {
+    margin-right: 6px;
+}
+
+/* NAVBAR GLASS */
+.navbar-custom {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 18px;
+    margin: 10px auto;
+    padding: 10px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* LINKS */
+.navbar-custom .nav-link {
+    color: #fff !important;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    opacity: 1;
+}
+
+/* LINK ACTIVO */
+.navbar-custom .nav-link.active {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+/* BRAND */
+.navbar-custom .navbar-brand {
+    color: #fff !important;
+    font-weight: 600;
+}
+
+/* BOTÓN HAMBURGUESA */
+.navbar-custom .navbar-toggler {
+    border: none;
 }
