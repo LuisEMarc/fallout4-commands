@@ -26,3 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+window.addEventListener("scroll", () => {
+    const nav = document.querySelector(".navbar-custom");
+    nav.classList.toggle("scrolled", window.scrollY > 20);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = window.location.pathname.split("/").pop();
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+        if (link.getAttribute("href").includes(currentPage)) {
+            link.classList.add("active");
+        }
+    });
+});
