@@ -48,32 +48,264 @@
 
 <body class="container py-4">
 
+    <!-- TÍTULO -->
     <div class="main-title d-flex align-items-center justify-content-center gap-3 mb-4">
         <img src="../assets/images/title.png" class="main-logo">
         <h1 class="m-0">Misiones</h1>
     </div>
 
-    <!-- CONTENIDO -->
-    <div class="section-title">Misiones Repetidas</div>
-    <div class="section-bar"></div>
+    <!-- FILTRO -->
+    <div class="filter-container mb-3">
 
-    <!-- EJEMPLOS (tú metes tu info aquí) -->
-    <div class="row-card">
-        <strong>Misión Bingo</strong>
-        <div class="command-text">Las da PAM del Ferrocarril, son un total de 3 misiones en ubicaciones aleatorias.
-        </div>
-        <div class="command-text"><strong>Finalidad</strong>: Estas misiones son necesarias para desbloquear la
-            tecnología de Malla Balística a través de Tom el Chapuzas.</div>
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="railroad">Ferrocarril</button>
+        <button class="filter-btn" data-filter="minutemen">Minutemen</button>
+        <button class="filter-btn" data-filter="institute">Instituto</button>
+        <button class="filter-btn" data-filter="bos">Hermandad</button>
+
     </div>
 
-    <div class="row-card">
-        <strong>Misión MILA</strong>
-        <div class="command-text">Las da Tom el Chapuzas del Ferrocarril, son un total de 10 misiones en ubicaciones
-            aleatorias.</div>
-        <div class="command-text"><strong>Objetivo</strong>: Instalar el dispositivo MILA en puntos elevados, a menudo
-            tras superar zonas con enemigos.</div>
-        <div class="command-text"><strong>Recompensas</strong>: Generalmente, obtienes experiencia y una pequeña
-            cantidad de chapas, aunque no son misiones principales del Ferrocarril.</div>
+    <!-- CONTENIDO -->
+
+    <!-- SECCIÓN -->
+    <div class="mission-section">
+        <div class="section-title">🧠 Ferrocarril</div>
+        <div class="section-bar"></div>
+
+        <!-- CARD -->
+        <div class="row-card mission-card" data-faction="railroad">
+
+            <div class="mission-header">
+                🎯 Jackpot (PAM)
+                <span class="badge-mission">Repetible</span>
+            </div>
+
+            <div class="mission-body">
+                <strong>NPC:</strong> PAM (Ferrocarril)<br>
+                <strong>Tipo:</strong> Recuperación de tecnología<br>
+                <strong>Dificultad:</strong> Media<br>
+                <strong>Recomendado:</strong> Nivel 15+
+            </div>
+
+            <div class="mission-highlight">
+                🔥 Desbloquea la Malla Balística (uno de los mejores upgrades del juego)
+            </div>
+
+            <div class="mission-footer">
+                <strong>¿Vale la pena?</strong> Sí — esencial para builds con ropa ligera
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="row-card mission-card" data-faction="railroad">
+
+            <div class="mission-header">
+                📡 MILA (Tinker Tom)
+                <span class="badge-mission">Repetible</span>
+            </div>
+
+            <div class="mission-body">
+                <strong>NPC:</strong> Tinker Tom<br>
+                <strong>Tipo:</strong> Colocación de sensores<br>
+                <strong>Dificultad:</strong> Baja<br>
+                <strong>Recomendado:</strong> Nivel 10+
+            </div>
+
+            <div class="mission-highlight">
+                📍 Exploración de ubicaciones + experiencia fácil
+            </div>
+
+            <div class="mission-footer">
+                <strong>¿Vale la pena?</strong> Sí — útil para explorar y subir nivel rápido
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- SECCIÓN -->
+    <div class="mission-section">
+        <div class="section-title">⚔️ Minutemen</div>
+        <div class="section-bar"></div>
+
+        <div class="row-card mission-card" data-faction="minutemen">
+
+            <div class="mission-header">
+                🏠 Defender asentamiento
+                <span class="badge-mission">Repetible</span>
+            </div>
+
+            <div class="mission-body">
+                <strong>NPC:</strong> Preston Garvey<br>
+                <strong>Tipo:</strong> Defensa<br>
+                <strong>Dificultad:</strong> Variable<br>
+            </div>
+
+            <div class="mission-highlight">
+                🛠 Mejora asentamientos + recursos constantes
+            </div>
+
+            <div class="mission-footer">
+                <strong>¿Vale la pena?</strong> Sí — clave para desarrollo de asentamientos
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- SECCIÓN -->
+    <div class="mission-section">
+        <div class="section-title">🧬 Instituto</div>
+        <div class="section-bar"></div>
+
+        <div class="row-card mission-card" data-faction="institute">
+
+            <div class="mission-header">
+                🧪 Synth Retention
+                <span class="badge-mission">Repetible</span>
+            </div>
+
+            <div class="mission-body">
+                <strong>NPC:</strong> Father / Instituto<br>
+                <strong>Tipo:</strong> Recuperación de synths<br>
+                <strong>Dificultad:</strong> Media<br>
+                <strong>Recomendado:</strong> Nivel 20+
+            </div>
+
+            <div class="mission-highlight">
+                🤖 Combate frecuente contra synths + buen loot
+            </div>
+
+            <div class="mission-footer">
+                <strong>¿Vale la pena?</strong> Regular — útil para XP pero sin recompensas únicas importantes
+            </div>
+
+        </div>
+
+
+        <div class="row-card mission-card" data-faction="institute">
+
+            <div class="mission-header">
+                📡 Feeding the Troops
+                <span class="badge-mission">Repetible</span>
+            </div>
+
+            <div class="mission-body">
+                <strong>NPC:</strong> Instituto<br>
+                <strong>Tipo:</strong> Recolección de recursos<br>
+                <strong>Dificultad:</strong> Baja<br>
+            </div>
+
+            <div class="mission-highlight">
+                📦 Obtención de recursos y experiencia sencilla
+            </div>
+
+            <div class="mission-footer">
+                <strong>¿Vale la pena?</strong> Baja — más útil al inicio que en late game
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SECCIÓN -->
+    <div class="mission-section">
+        <div class="section-title">⚔️ Hermandad del Acero</div>
+        <div class="section-bar"></div>
+
+        <div class="row-card mission-card" data-faction="bos">
+
+            <div class="mission-header">
+                💀 Cleansing the Commonwealth
+                <span class="badge-mission">Repetible</span>
+            </div>
+
+            <div class="mission-body">
+                <strong>NPC:</strong> Knight Rhys<br>
+                <strong>Tipo:</strong> Eliminación de enemigos<br>
+                <strong>Dificultad:</strong> Media<br>
+                <strong>Recomendado:</strong> Nivel 15+
+            </div>
+
+            <div class="mission-highlight">
+                🔫 Combate constante + XP + loot de enemigos
+            </div>
+
+            <div class="mission-footer">
+                <strong>¿Vale la pena?</strong> Sí — ideal para farmear experiencia rápidamente
+            </div>
+
+        </div>
+
+
+        <div class="row-card mission-card" data-faction="bos">
+
+            <div class="mission-header">
+                📡 Quartermastery
+                <span class="badge-mission">Repetible</span>
+            </div>
+
+            <div class="mission-body">
+                <strong>NPC:</strong> Scribe Haylen<br>
+                <strong>Tipo:</strong> Recuperación de tecnología<br>
+                <strong>Dificultad:</strong> Media<br>
+            </div>
+
+            <div class="mission-highlight">
+                🧠 Exploras ubicaciones + obtienes tecnología valiosa
+            </div>
+
+            <div class="mission-footer">
+                <strong>¿Vale la pena?</strong> Sí — buena para explorar y conseguir loot
+            </div>
+
+        </div>
+
+        <div class="row-card mission-card" data-faction="bos">
+
+            <div class="mission-header">
+                📄 Documentos Técnicos
+                <span class="badge-mission">Repetible</span>
+            </div>
+
+            <div class="mission-body">
+                <strong>NPC:</strong> Proctor Quinlan<br>
+                <strong>Tipo:</strong> Entrega de objetos<br>
+                <strong>Dificultad:</strong> Muy baja<br>
+            </div>
+
+            <div class="mission-highlight">
+                💰 Entrega documentos encontrados para ganar XP y chapas sin esfuerzo
+            </div>
+
+            <div class="mission-footer">
+                <strong>¿Vale la pena?</strong> 🔥 Sí — ingreso pasivo mientras exploras
+            </div>
+
+        </div>
+
+        <div class="row-card mission-card" data-faction="bos">
+
+            <div class="mission-header">
+                🧬 Muestras de Sangre
+                <span class="badge-mission">Repetible</span>
+            </div>
+
+            <div class="mission-body">
+                <strong>NPC:</strong> Proctor Teagan<br>
+                <strong>Tipo:</strong> Entrega de objetos<br>
+                <strong>Dificultad:</strong> Muy baja<br>
+            </div>
+
+            <div class="mission-highlight">
+                🧪 Entrega muestras de enemigos para obtener recompensas
+            </div>
+
+            <div class="mission-footer">
+                <strong>¿Vale la pena?</strong> Sí — ingreso adicional sin esfuerzo
+            </div>
+
+        </div>
     </div>
 
     <footer class="footer-glass text-center mt-5">

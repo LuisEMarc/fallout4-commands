@@ -50,7 +50,6 @@ const modalBadge = document.getElementById("modalDlcBadge");
 
 document.querySelectorAll(".clickable-img").forEach((img) => {
   img.addEventListener("click", () => {
-    // lógica existente...
 
     const dlc = img.dataset.dlc;
 
@@ -65,5 +64,35 @@ document.querySelectorAll(".clickable-img").forEach((img) => {
     } else {
       modalBadge.style.display = "none";
     }
+  });
+});
+
+document.querySelectorAll(".filter-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // activar botón
+    document
+      .querySelectorAll(".filter-btn")
+      .forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+
+    // mostrar/ocultar cards
+    document.querySelectorAll(".mission-card").forEach((card) => {
+      if (filter === "all" || card.dataset.faction === filter) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    // manejar secciones SIN cambiar clases
+    document.querySelectorAll(".mission-section").forEach((section) => {
+      const visibleCards = section.querySelectorAll(
+        '.mission-card:not([style*="display: none"])',
+      );
+
+      section.style.display = visibleCards.length > 0 ? "block" : "none";
+    });
   });
 });
