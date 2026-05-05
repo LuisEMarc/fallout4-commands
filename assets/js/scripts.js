@@ -1,3 +1,6 @@
+// ============================
+// COPY TO CLIPBOARD
+// ============================
 function copyText(text) {
   navigator.clipboard.writeText(text);
 
@@ -9,34 +12,26 @@ function copyText(text) {
   }, 3000);
 }
 
+// ============================
+// INIT APP
+// ============================
 document.addEventListener("DOMContentLoaded", () => {
-  const modal = new bootstrap.Modal(document.getElementById("imgModal"));
-
-  const modalImage = document.getElementById("modalImage");
-  const modalName = document.getElementById("modalName");
-  const modalSkill = document.getElementById("modalSkill");
-  const modalAffinity = document.getElementById("modalAffinity");
-  const modalMission = document.getElementById("modalMission");
-
-  document.querySelectorAll(".clickable-img").forEach((img) => {
-    img.addEventListener("click", () => {
-      modalImage.src = img.src;
-      modalName.textContent = "Nombre: " + img.dataset.name;
-      modalSkill.textContent = "Habilidad: " + img.dataset.skill;
-      modalAffinity.textContent = img.dataset.affinity;
-      modalMission.textContent = img.dataset.mission;
-
-      modal.show();
-    });
-  });
+  initNavbar();
+  initModal();
+  initFilters();
+  initSearch();
 });
 
-window.addEventListener("scroll", () => {
+// ============================
+// NAVBAR
+// ============================
+function initNavbar() {
   const nav = document.querySelector(".navbar-custom");
-  nav.classList.toggle("scrolled", window.scrollY > 20);
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 20);
+  });
+
   const currentPage = window.location.pathname.split("/").pop();
 
   document.querySelectorAll(".nav-link").forEach((link) => {
@@ -44,55 +39,127 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.add("active");
     }
   });
-});
+}
 
-const modalBadge = document.getElementById("modalDlcBadge");
+// ============================
+// MODAL ACOMPAÑANTES
+// ============================
+function initModal() {
+  const modalElement = document.getElementById("imgModal");
+  if (!modalElement) return; // evita errores en otras páginas
 
-document.querySelectorAll(".clickable-img").forEach((img) => {
-  img.addEventListener("click", () => {
+  const modal = new bootstrap.Modal(modalElement);
 
-    const dlc = img.dataset.dlc;
+  const modalImage = document.getElementById("modalImage");
+  const modalName = document.getElementById("modalName");
+  const modalSkill = document.getElementById("modalSkill");
+  const modalAffinity = document.getElementById("modalAffinity");
+  const modalMission = document.getElementById("modalMission");
+  const modalBadge = document.getElementById("modalDlcBadge");
 
-    if (dlc) {
-      modalBadge.style.display = "block";
+  document.querySelectorAll(".clickable-img").forEach((img) => {
+    img.addEventListener("click", () => {
+      // contenido
+      modalImage.src = img.src;
+      modalName.textContent = "Nombre: " + img.dataset.name;
+      modalSkill.textContent = "Habilidad: " + img.dataset.skill;
+      modalAffinity.textContent = img.dataset.affinity;
+      modalMission.textContent = img.dataset.mission;
 
-      if (dlc === "nuka") {
-        modalBadge.src = "../assets/images/nuka_world.png";
-      } else if (dlc === "automatron") {
-        modalBadge.src = "../assets/images/automatron.png";
+      // DLC badge
+      const dlc = img.dataset.dlc;
+
+      if (dlc && modalBadge) {
+        modalBadge.style.display = "block";
+
+        const dlcImages = {
+          nuka: "../assets/images/nuka_world.png",
+          automatron: "../assets/images/automatron.png",
+        };
+
+        modalBadge.src = dlcImages[dlc] || "";
+      } else if (modalBadge) {
+        modalBadge.style.display = "none";
       }
-    } else {
-      modalBadge.style.display = "none";
+
+      modal.show();
+    });
+  });
+}
+
+// ============================
+// FILTROS
+// ============================
+function initFilters() {
+  document.querySelectorAll(".filter-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document
+        .querySelectorAll(".filter-btn")
+        .forEach((b) => b.classList.remove("active"));
+
+      btn.classList.add("active");
+
+      updateView();
+    });
+  });
+}
+
+// ============================
+// BUSCADOR
+// ============================
+function initSearch() {
+  const input = document.getElementById("searchInput");
+  if (!input) return;
+
+  input.addEventListener("input", updateView);
+}
+
+// ============================
+// CORE LOGIC (FILTRO + SEARCH)
+// ============================
+function updateView() {
+  const searchInput = document.getElementById("searchInput");
+  const searchValue = searchInput ? searchInput.value.toLowerCase() : "";
+
+  const activeBtn = document.querySelector(".filter-btn.active");
+  const activeFilter = activeBtn ? activeBtn.dataset.filter : "all";
+
+  let anyVisible = false;
+
+  // filtrar cards
+  document.querySelectorAll(".command-card").forEach((card) => {
+    const text = card.innerText.toLowerCase();
+
+    const matchSearch = text.includes(searchValue);
+    const matchFilter =
+      activeFilter === "all" || card.dataset.category === activeFilter;
+
+    const visible = matchSearch && matchFilter;
+
+    card.style.display = visible ? "block" : "none";
+
+    if (visible) anyVisible = true;
+  });
+
+  // ocultar secciones vacías
+  document.querySelectorAll(".command-section").forEach((section) => {
+    const visibleCards = section.querySelectorAll(
+      '.command-card:not([style*="display: none"])'
+    );
+
+    section.style.display = visibleCards.length > 0 ? "block" : "none";
+  });
+
+  // estado vacío
+  const noResults = document.getElementById("noResults");
+  if (noResults) {
+    noResults.style.display = anyVisible ? "none" : "block";
+
+    const text = noResults.querySelector("p");
+    if (text) {
+      text.textContent = searchValue
+        ? `No encontramos "${searchValue}"`
+        : "Cambia el filtro para ver resultados";
     }
-  });
-});
-
-document.querySelectorAll(".filter-btn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    // activar botón
-    document
-      .querySelectorAll(".filter-btn")
-      .forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    const filter = btn.dataset.filter;
-
-    // mostrar/ocultar cards
-    document.querySelectorAll(".mission-card").forEach((card) => {
-      if (filter === "all" || card.dataset.faction === filter) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    });
-
-    // manejar secciones SIN cambiar clases
-    document.querySelectorAll(".mission-section").forEach((section) => {
-      const visibleCards = section.querySelectorAll(
-        '.mission-card:not([style*="display: none"])',
-      );
-
-      section.style.display = visibleCards.length > 0 ? "block" : "none";
-    });
-  });
-});
+  }
+}
