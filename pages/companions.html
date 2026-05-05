@@ -4,49 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acompañantes</title>
+    <title>Vault Assistant | Acompañantes</title>
 
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="icon" type="image/x-icon" href="../assets/images/fallouticon.ico">
 </head>
 
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="../index.html">⚡ Fallout 4 Tools</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNav">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html"> <i class="bi bi-house"></i>
+                        <span class="nav-text">Inicio</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="missions_info.html"><i class="bi bi-journal-text"></i>
+                        <span class="nav-text">Misiones</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"> <i class="bi bi-people"></i>
+                        <span class="nav-text">Acompañantes</span></a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
 <body class="container py-4">
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container-fluid">
-
-            <a class="navbar-brand" href="../index.html">⚡ Fallout Tools</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="menuNav">
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html"> <i class="bi bi-house"></i>
-                            <span class="nav-text">Inicio</span></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="missions_info.html"><i class="bi bi-journal-text"></i>
-                            <span class="nav-text">Misiones</span></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#"> <i class="bi bi-people"></i>
-                            <span class="nav-text">Acompañantes</span></a>
-                    </li>
-
-                </ul>
-            </div>
-
-        </div>
-    </nav>
+    <div class="main-title d-flex align-items-center justify-content-center gap-3 mb-4">
+        <img src="../assets/images/title.png" class="main-logo">
+        <h1 class="m-0">Acompañantes</h1>
+    </div>
 
     <!-- CONTENIDO -->
     <div class="section-title">Acompañantes</div>
@@ -54,8 +59,9 @@
 
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/piper.jpg" class="companion-img
-            clickable-img" data-name="Piper"
-            data-skill=" Gift of Gab — +100% XP al descubrir ubicaciones y persuadir con éxito">
+            clickable-img" data-name="Piper" data-skill="Gift of Gab — +100% XP al descubrir ubicaciones y persuadir"
+            data-affinity="Le gusta ayudar a otros, abrir cerraduras y decisiones generosas."
+            data-mission="No es necesario">
         <div>
             <div><strong>Nombre:</strong> Piper</div>
             <div class="command-text">Habilidad: Gift of Gab — +100% XP al descubrir ubicaciones y persuadir con éxito
@@ -66,7 +72,9 @@
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/nick_valentine.jpg" class="companion-img
             clickable-img" data-name="Nick Valentine"
-            data-skill=" Close to Metal — intento extra al hackear y reducción del tiempo de bloqueo">
+            data-skill="Close to Metal — intento extra al hackear y menos tiempo de bloqueo"
+            data-affinity="Le gusta la justicia, hackear y decisiones morales equilibradas."
+            data-mission="No es necesario">
         <div>
             <div><strong>Nombre:</strong> Nick Valentine</div>
             <div class="command-text">Habilidad: Close to Metal — intento extra al hackear y reducción del tiempo de
@@ -76,8 +84,10 @@
 
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/curie.jpg" class="companion-img
-            clickable-img" data-name="Curie" data-skill=" Combat Medic — cura automáticamente al jugador al bajar de 10% de vida
-                (1 vez al día)">
+            clickable-img" data-name="Curie"
+            data-skill="Combat Medic — cura automática al bajar de 10% de vida (1 vez al día)"
+            data-affinity="Le gustan decisiones bondadosas, ciencia y ayudar a otros."
+            data-mission="No — se recomienda completar 'Emergent Behavior'">
         <div>
             <div><strong>Nombre:</strong> Curie</div>
             <div class="command-text">Habilidad: Combat Medic — cura automáticamente al jugador al bajar de 10% de vida
@@ -87,8 +97,9 @@
 
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/cait.png" class="companion-img
-            clickable-img" data-name="Cait" data-skill=" Trigger Rush — regenera AP más rápido cuando tu vida está por debajo
-                del 25%">
+            clickable-img" data-name="Cait" data-skill="Trigger Rush — regeneración de AP con vida baja"
+            data-affinity="Le gustan acciones violentas, robo y decisiones egoístas."
+            data-mission="Sí — Completar 'Benign Intervention'">
         <div>
             <div><strong>Nombre:</strong> Cait</div>
             <div class="command-text">Habilidad: Trigger Rush — regenera AP más rápido cuando tu vida está por debajo
@@ -99,7 +110,9 @@
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/paladin-danse.jpg" class="companion-img
             clickable-img" data-name="Paladin Danse"
-            data-skill=" Know Your Enemy — +20% daño contra ghouls, supermutantes y sinteticos">
+            data-skill="Know Your Enemy — +20% daño contra ghouls, supermutantes y sinteticos"
+            data-affinity="Le gustan decisiones honorables y apoyo a la Hermandad."
+            data-mission="Sí — Completar 'Blind Betrayal'">
         <div>
             <div><strong>Nombre:</strong> Paladin Danse</div>
             <div class="command-text">Habilidad: Know Your Enemy — +20% daño contra ghouls, supermutantes y sinteticos
@@ -109,8 +122,9 @@
 
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/deacon.jpg" class="companion-img
-            clickable-img" data-name="Deacon" data-skill=" Cloak & Dagger — +20% daño de sigilo y duración extendida de Stealth
-                Boy">
+            clickable-img" data-name="Deacon"
+            data-skill="Cloak & Dagger — +20% daño de sigilo y mayor duración de Stealth Boy"
+            data-affinity="Le gusta el sigilo, hackear y apoyar al Railroad." data-mission="No es necesario">
         <div>
             <div><strong>Nombre:</strong> Deacon</div>
             <div class="command-text">Habilidad: Cloak & Dagger — +20% daño de sigilo y duración extendida de Stealth
@@ -120,8 +134,9 @@
 
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/preston.jpg" class="companion-img
-            clickable-img" data-name="Preston Garvey" data-skill=" United We Stand — +20% daño y +20 resistencia cuando enfrentas 3 o más
-                enemigos">
+            clickable-img" data-name="Preston Garvey"
+            data-skill="United We Stand — +20% daño y resistencia contra múltiples enemigos"
+            data-affinity="Le gusta ayudar asentamientos y apoyar a los Minutemen." data-mission="No es necesario">
         <div>
             <div><strong>Nombre:</strong> Preston Garvey</div>
             <div class="command-text">Habilidad: United We Stand — +20% daño y +20 resistencia cuando enfrentas 3 o más
@@ -131,7 +146,9 @@
 
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/maccready.jpg" class="companion-img
-            clickable-img" data-name="MacCready" data-skill=" Killshot — +20% precisión en VATS a la cabeza">
+            clickable-img" data-name="MacCready" data-skill="Killshot — +20% precisión en disparos a la cabeza en VATS"
+            data-affinity="Le gustan decisiones prácticas, robo y supervivencia."
+            data-mission="Sí — Completar 'Long Road Ahead'">
         <div>
             <div><strong>Nombre:</strong> MacCready</div>
             <div class="command-text">Habilidad: Killshot — +20% precisión en VATS a la cabeza</div>
@@ -140,8 +157,8 @@
 
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/hancock.jpg" class="companion-img
-            clickable-img" data-name="Hancock"
-            data-skill=" Isodoped — llena crítico más rápido cuando tienes radiación (≥250 rads)">
+            clickable-img" data-name="Hancock" data-skill="Isodoped — llena críticos más rápido con radiación"
+            data-affinity="Le gustan decisiones rebeldes, libertad y uso de drogas." data-mission="No es necesario">
         <div>
             <div><strong>Nombre:</strong> Hancock</div>
             <div class="command-text">Habilidad: Isodoped — llena crítico más rápido cuando tienes radiación (≥250 rads)
@@ -151,8 +168,8 @@
 
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/strong.jpg" class="companion-img
-            clickable-img" data-name="Strong"
-            data-skill=" Berserk — +20% daño cuerpo a cuerpo cuando tu vida está baja">
+            clickable-img" data-name="Strong" data-skill="Berserk — +20% daño cuerpo a cuerpo con poca vida"
+            data-affinity="Le gusta la violencia, fuerza bruta y canibalismo." data-mission="No es necesario">
         <div>
             <div><strong>Nombre:</strong> Strong</div>
             <div class="command-text">Habilidad: Berserk — +20% daño cuerpo a cuerpo cuando tu vida está baja</div>
@@ -161,7 +178,8 @@
 
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/x6-88.jpg" class="companion-img
-            clickable-img" data-name="X6-88" data-skill=" Shield Harmonics — +20 resistencia a daño energético">
+            clickable-img" data-name="X6-88" data-skill="Shield Harmonics — +20 resistencia a energía"
+            data-affinity="Le gustan decisiones del Instituto y eficiencia." data-mission="No es necesario">
         <div>
             <div><strong>Nombre:</strong> X6-88</div>
             <div class="command-text">Habilidad: Shield Harmonics — +20 resistencia a daño energético</div>
@@ -171,7 +189,8 @@
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/codsworth.jpg" class="companion-img
             clickable-img" data-name="Codsworth"
-            data-skill=" Robot Sympathy — +10 resistencia a daño energético contra robots">
+            data-skill="Robot Sympathy — +10 resistencia a daño energético contra robots"
+            data-affinity="Le gustan acciones amables y evitar drogas o robo." data-mission="No es necesario">
         <div>
             <div><strong>Nombre:</strong> Codsworth</div>
             <div class="command-text">Habilidad: Robot Sympathy — +10 resistencia a daño energético contra robots</div>
@@ -180,8 +199,8 @@
 
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/albondiga.jpg" class="companion-img
-            clickable-img" data-name="Alb&oacute;ndiga"
-            data-skill=" Attack Dog — inmoviliza enemigos y mejora VATS (requiere perk en árbol)">
+            clickable-img" data-name="Alb&oacute;ndiga" data-skill="Attack Dog — mejora combate con perks del jugador"
+            data-affinity="No aplica afinidad tradicional." data-mission="No es necesario">
         <div>
             <div><strong>Nombre:</strong> Alb&oacute;ndiga</div>
             <div class="command-text">Habilidad: Attack Dog — inmoviliza enemigos y mejora VATS (requiere perk en árbol)
@@ -191,10 +210,29 @@
 
     <div class="row-card d-flex align-items-center gap-3">
         <img src="../assets/images/companions/ada.jpg" class="companion-img
-            clickable-img" data-name="Ada" data-skill="No otorga perk (personalizable con mods de robot)">
+            clickable-img" data-dlc="automatron" data-name="Ada" data-skill="Sin perk — robot personalizable"
+            data-affinity="No aplica afinidad." data-mission="No es necesario">
         <div>
+
+            <!-- Badge DLC -->
+            <img src="../assets/images/automatron.png" class="dlc-badge">
+
             <div><strong>Nombre:</strong> Ada</div>
             <div class="command-text">Habilidad: No otorga perk (personalizable con mods de robot)</div>
+        </div>
+    </div>
+
+    <div class="row-card d-flex align-items-center gap-3">
+        <img src="../assets/images/companions/porter_cage.jpg" class="companion-img
+            clickable-img" data-dlc="nuka" data-name="Porter Gage" data-skill="Lessons in Blood — +5% XP por kill y +10 resistencia"
+            data-affinity="Le gustan decisiones egoístas y comportamiento de saqueador." data-mission="No es necesario">
+        <div>
+
+            <!-- Badge DLC -->
+            <img src="../assets/images/nuka_world.png" class="dlc-badge">
+
+            <div><strong>Nombre:</strong> Porter Gage</div>
+            <div class="command-text">Habilidad: Lessons in Blood — +5% XP por kill y +10 resistencia</div>
         </div>
     </div>
 
@@ -203,14 +241,24 @@
             <div class="modal-content modal-glass text-center p-3">
 
                 <!-- Imagen -->
-                <img id="modalImage" class="img-fluid modal-img mb-3">
+                <div class="modal-img-wrapper mb-3">
+                    <img id="modalImage" class="img-fluid modal-img">
+                    <img id="modalDlcBadge" class="dlc-badge-modal">
+                </div>
 
                 <!-- Info -->
                 <div id="modalInfo">
-                    <div class="fw-bold" id="modalName"></div>
-                    <div class="command-text" id="modalSkill"></div>
+                    <div class="fw-bold mb-1" id="modalName"></div>
+                    <div class="command-text mb-2" id="modalSkill"></div>
+                    <div class="modal-section">
+                        <strong>¿Cómo subir afinidad?</strong>
+                        <div id="modalAffinity"></div>
+                    </div>
+                    <div class="modal-section mt-2">
+                        <strong>¿Requiere misión especial?</strong>
+                        <div id="modalMission"></div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
