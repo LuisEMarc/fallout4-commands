@@ -53,251 +53,348 @@
         <h1 class="m-0">Comandos</h1>
     </div>
 
-    <!-- ================= GENERALES ================= -->
-    <div class="section-title">Generales</div>
-    <div class="section-bar"></div>
-
-    <div class="row">
-
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>Chapas</strong>
-                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 0000000f 10000')"></i>
-                <div class="command-text">player.additem 0000000f 10000</div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>Nivel</strong>
-                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.setlevel X')"></i>
-                <div class="command-text">player.setlevel X</div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>God Mode</strong>
-                <i class="bi bi-clipboard copy-btn" onclick="copyText('tgm')"></i>
-                <div class="command-text">tgm</div>
-            </div>
-        </div>
-
+    <!-- BUSCADOR -->
+    <div class="search-container mb-3">
+        <input type="text" id="searchInput" placeholder="Buscar comando o material..." />
     </div>
 
-    <div class="row">
+    <!-- FILTROS -->
+    <div class="filter-container mb-3">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="general">Generales</button>
+        <button class="filter-btn" data-filter="materials">Materiales</button>
+        <button class="filter-btn" data-filter="ammo">Munición</button>
+    </div>
 
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>XP</strong>
+    <!-- ================= GENERALES ================= -->
+    <div class="command-section">
+        <div class="section-title">Generales</div>
+        <div class="section-bar"></div>
+
+        <div class="cards-container">
+
+            <div class="row-card command-card" data-category="general">
+                <div class="command-header">
+                    💰 Chapas
+                    <span class="badge-command badge-basic">Básico</span>
+                </div>
+                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 0000000f 10000')"></i>
+                <div class="command-text">
+                    player.additem 0000000f 10000
+                </div>
+            </div>
+
+            <div class="row-card command-card" data-category="general">
+                <div class="command-header">
+                    Nivel
+                    <span class="badge-command badge-basic">Básico</span>
+                </div>
+                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.setlevel X')"></i>
+                <div class="command-text">
+                    player.setlevel X
+                </div>
+            </div>
+
+            <div class="row-card command-card" data-category="general">
+                <div class="command-header">
+                    God Mode
+                    <span class="badge-command badge-basic">Básico</span>
+                </div>
+                <i class="bi bi-clipboard copy-btn" onclick="copyText('tgm')"></i>
+                <div class="command-text">
+                    tgm
+                </div>
+            </div>
+
+            <div class="row-card command-card" data-category="general">
+                <div class="command-header">
+                    Experiencia
+                    <span class="badge-command badge-basic">Básico</span>
+                </div>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.rewardxp 1000')"></i>
                 <div class="command-text">
                     player.rewardxp 1000
                 </div>
             </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>Curación</strong>
+            <div class="row-card command-card" data-category="general">
+                <div class="command-header">
+                    Curación
+                    <span class="badge-command badge-basic">Básico</span>
+                </div>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.resethealth')"></i>
                 <div class="command-text">
                     player.resethealth
                 </div>
             </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>Peso infinito</strong>
+            <div class="row-card command-card" data-category="general">
+                <div class="command-header">
+                    Peso infinito
+                    <span class="badge-command badge-basic">Básico</span>
+                </div>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.modav carryweight 9999')"></i>
                 <div class="command-text">
                     player.modav carryweight 9999
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
 
     <!-- ================= MATERIALES ================= -->
-    <div class="section-title">Materiales</div>
-    <div class="section-bar"></div>
+    <div class="command-section">
+        <div class="section-title">Materiales</div>
+        <div class="section-bar"></div>
 
-    <div class="row-card">
-        <strong>Aluminio, Cobre, Circuitos</strong>
-        <i class="bi bi-clipboard copy-btn"
-            onclick="copyText('player.additem 0006907A 10000; player.additem 0006907C 10000; player.additem 0006907B 10000')"></i>
-        <div class="command-text">player.additem 0006907A 10000; player.additem 0006907C 10000; player.additem 0006907B
-            10000</div>
-    </div>
+        <div class="row-card command-card" data-category="materials">
+            <div class="command-header">
+                Aluminio, Cobre, Circuitos
+                <span class="badge-command badge-material">Materiales</span>
+            </div>
+            <i class="bi bi-clipboard copy-btn"
+                onclick="copyText('player.additem 0006907A 10000; player.additem 0006907C 10000; player.additem 0006907B 10000')"></i>
+            <div class="command-text">
+                player.additem 0006907A 10000; player.additem 0006907C 10000; player.additem 0006907B 10000
+            </div>
+        </div>
 
-    <div class="row-card">
-        <strong>Cristal, Madera, Goma</strong>
-        <i class="bi bi-clipboard copy-btn"
-            onclick="copyText('player.additem 0006907D 10000; player.additem 000731A3 10000; player.additem 00106D98 10000')"></i>
-        <div class="command-text">player.additem 0006907D 10000; player.additem 000731A3 10000; player.additem 00106D98
-            10000</div>
-    </div>
+        <div class="row-card command-card" data-category="materials">
+            <div class="command-header">
+                Cristal, Madera, Goma
+                <span class="badge-command badge-material">Materiales</span>
+            </div>
+            <i class="bi bi-clipboard copy-btn"
+                onclick="copyText('player.additem 0006907D 10000; player.additem 000731A3 10000; player.additem 00106D98 10000')"></i>
+            <div class="command-text">
+                player.additem 0006907D 10000; player.additem 000731A3 10000; player.additem 00106D98 10000
+            </div>
+        </div>
 
-    <div class="row-card">
-        <strong>Hormigón, Acero, Hueso</strong>
-        <i class="bi bi-clipboard copy-btn"
-            onclick="copyText('player.additem 00106D99 10000; player.additem 000731A4 10000; player.additem 000AEC5D 10000')"></i>
-        <div class="command-text">player.additem 00106D99 10000; player.additem 000731A4 10000; player.additem 000AEC5D
-            10000</div>
-    </div>
+        <div class="row-card command-card" data-category="materials">
+            <div class="command-header">
+                Hormigón, Acero, Hueso
+                <span class="badge-command badge-material">Materiales</span>
+            </div>
+            <i class="bi bi-clipboard copy-btn"
+                onclick="copyText('player.additem 00106D99 10000; player.additem 000731A4 10000; player.additem 000AEC5D 10000')"></i>
+            <div class="command-text">
+                player.additem 00106D99 10000; player.additem 000731A4 10000; player.additem 000AEC5D 10000
+            </div>
+        </div>
 
-    <div class="row-card">
-        <strong>Engranajes, Pegamento, Textiles</strong>
-        <i class="bi bi-clipboard copy-btn"
-            onclick="copyText('player.additem 0006907E 10000; player.additem 001BF72E 10000; player.additem 000AEC5F 10000')"></i>
-        <div class="command-text">player.additem 0006907E 10000; player.additem 001BF72E 10000; player.additem 000AEC5F
-            10000</div>
-    </div>
+        <div class="row-card command-card" data-category="materials">
+            <div class="command-header">
+                Engranajes, Pegamento, Textiles
+                <span class="badge-command badge-material">Materiales</span>
+            </div>
+            <i class="bi bi-clipboard copy-btn"
+                onclick="copyText('player.additem 0006907E 10000; player.additem 001BF72E 10000; player.additem 000AEC5F 10000')"></i>
+            <div class="command-text">
+                player.additem 0006907E 10000; player.additem 001BF72E 10000; player.additem 000AEC5F 10000
+            </div>
+        </div>
 
-    <div class="row-card">
-        <strong>Fibra Óptica, Plástico, Cerámica</strong>
-        <i class="bi bi-clipboard copy-btn"
-            onclick="copyText('player.additem 00069087 10000; player.additem 0006907F 10000; player.additem 000AEC5E 10000')"></i>
-        <div class="command-text">player.additem 00069087 10000; player.additem 0006907F 10000; player.additem 000AEC5E
-            10000</div>
-    </div>
+        <div class="row-card command-card" data-category="materials">
+            <div class="command-header">
+                Fibra Óptica, Plástico, Cerámica
+                <span class="badge-command badge-material">Materiales</span>
+            </div>
+            <i class="bi bi-clipboard copy-btn"
+                onclick="copyText('player.additem 00069087 10000; player.additem 0006907F 10000; player.additem 000AEC5E 10000')"></i>
+            <div class="command-text">
+                player.additem 00069087 10000; player.additem 0006907F 10000; player.additem 000AEC5E 10000
+            </div>
+        </div>
 
-    <div class="row-card">
-        <strong>Plomo, Amianto, Oro</strong>
-        <i class="bi bi-clipboard copy-btn"
-            onclick="copyText('player.additem 000AEC63 10000; player.additem 000AEC5C 10000; player.additem 000AEC62 10000')"></i>
-        <div class="command-text">player.additem 000AEC63 10000; player.additem 000AEC5C 10000; player.additem 000AEC62
-            10000</div>
-    </div>
+        <div class="row-card command-card" data-category="materials">
+            <div class="command-header">
+                Plomo, Amianto, Oro
+                <span class="badge-command badge-material">Materiales</span>
+            </div>
+            <i class="bi bi-clipboard copy-btn"
+                onclick="copyText('player.additem 000AEC63 10000; player.additem 000AEC5C 10000; player.additem 000AEC62 10000')"></i>
+            <div class="command-text">
+                player.additem 000AEC63 10000; player.additem 000AEC5C 10000; player.additem 000AEC62 10000
+            </div>
+        </div>
 
-    <div class="row-card">
-        <strong>Piel, Tubo, Aceite</strong>
-        <i class="bi bi-clipboard copy-btn"
-            onclick="copyText('player.additem 000AEC64 10000; player.additem 000AEC60 10000; player.additem 001BF732 10000')"></i>
-        <div class="command-text">player.additem 000AEC64 10000; player.additem 000AEC60 10000; player.additem 001BF732
-            10000</div>
-    </div>
+        <div class="row-card command-card" data-category="materials">
+            <div class="command-header">
+                Piel, Tubo, Aceite
+                <span class="badge-command badge-material">Materiales</span>
+            </div>
+            <i class="bi bi-clipboard copy-btn"
+                onclick="copyText('player.additem 000AEC64 10000; player.additem 000AEC60 10000; player.additem 001BF732 10000')"></i>
+            <div class="command-text">
+                player.additem 000AEC64 10000; player.additem 000AEC60 10000; player.additem 001BF732 10000
+            </div>
+        </div>
 
-    <div class="row-card">
-        <strong>Ácido, Muelle, Material Nuclear</strong>
-        <i class="bi bi-clipboard copy-btn"
-            onclick="copyText('player.additem 001BF72D 10000; player.additem 00069082 10000; player.additem 00069086 10000')"></i>
-        <div class="command-text">player.additem 001BF72D 10000; player.additem 00069082 10000; player.additem 00069086
-            10000</div>
-    </div>
+        <div class="row-card command-card" data-category="materials">
+            <div class="command-header">
+                &Aacute;cido, Muelle, Material Nuclear
+                <span class="badge-command badge-material">Materiales</span>
+            </div>
+            <i class="bi bi-clipboard copy-btn"
+                onclick="copyText('player.additem 001BF72D 10000; player.additem 00069082 10000; player.additem 00069086 10000')"></i>
+            <div class="command-text">
+                player.additem 001BF72D 10000; player.additem 00069082 10000; player.additem 00069086 10000
+            </div>
+        </div>
 
-    <div class="row-card">
-        <strong>Antiséptico, Vidrio, Tornillo</strong>
-        <i class="bi bi-clipboard copy-btn"
-            onclick="copyText('player.additem 001BF72F 10000; player.additem 00069085 10000; player.additem 00069081 10000')"></i>
-        <div class="command-text">player.additem 001BF72F 10000; player.additem 00069085 10000; player.additem 00069081
-            10000</div>
-    </div>
+        <div class="row-card command-card" data-category="materials">
+            <div class="command-header">
+                Antiséptico, Vidrio, Tornillo
+                <span class="badge-command badge-material">Materiales</span>
+            </div>
+            <i class="bi bi-clipboard copy-btn"
+                onclick="copyText('player.additem 001BF72F 10000; player.additem 00069085 10000; player.additem 00069081 10000')"></i>
+            <div class="command-text">
+                player.additem 001BF72F 10000; player.additem 00069085 10000; player.additem 00069081 10000
+            </div>
+        </div>
 
-    <div class="row-card">
-        <strong>Cinta Adhesiva, Aguarr&aacute;s, Fibra de Vidrio</strong>
-        <i class="bi bi-clipboard copy-btn"
-            onclick="copyText('player.additem 0004D1F2 10000; player.additem 00059B1E 10000; player.additem 000AEC61 10000')"></i>
-        <div class="command-text">player.additem 0004D1F2 10000; player.additem 00059B1E 10000; player.additem 000AEC61
-            10000</div>
-    </div>
+        <div class="row-card command-card" data-category="materials">
+            <div class="command-header">
+                Cinta Adhesiva, Aguarr&aacute;s, Fibra de Vidrio
+                <span class="badge-command badge-material">Materiales</span>
+            </div>
+            <i class="bi bi-clipboard copy-btn"
+                onclick="copyText('player.additem 0004D1F2 10000; player.additem 00059B1E 10000; player.additem 000AEC61 10000')"></i>
+            <div class="command-text">
+                player.additem 0004D1F2 10000; player.additem 00059B1E 10000; player.additem 000AEC61 10000
+            </div>
+        </div>
 
-    <div class="row-card">
-        <strong>Dinero Pre-Guerra, Plata, Fibra Balística</strong>
-        <i class="bi bi-clipboard copy-btn"
-            onclick="copyText('player.additem 00059B02 10000; player.additem 000AEC66 10000; player.additem 000AEC5B 10000')"></i>
-        <div class="command-text">player.additem 00059B02 10000; player.additem 000AEC66 10000; player.additem 000AEC5B
-            10000</div>
+        <div class="row-card command-card" data-category="materials">
+            <div class="command-header">
+                Dinero Pre-Guerra, Plata, Fibra Bal&iacute;stica
+                <span class="badge-command badge-material">Materiales</span>
+            </div>
+            <i class="bi bi-clipboard copy-btn"
+                onclick="copyText('player.additem 00059B02 10000; player.additem 000AEC66 10000; player.additem 000AEC5B 10000')"></i>
+            <div class="command-text">
+                player.additem 00059B02 10000; player.additem 000AEC66 10000; player.additem 000AEC5B 10000
+            </div>
+        </div>
     </div>
 
     <!-- ================= MUNICIONES ================= -->
-    <div class="section-title">Municiones</div>
-    <div class="section-bar"></div>
+    <div class="command-section">
+        <div class="section-title">Municiones</div>
+        <div class="section-bar"></div>
 
-    <div class="row">
+        <div class="cards-container">
 
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>.45</strong>
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
+                    .45
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 0001F66A 10000')"></i>
-                <div class="command-text">player.additem 0001F66A 10000</div>
+                <div class="command-text">
+                    player.additem 0001F66A 10000
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>5.56</strong>
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
+                    5.56
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 0001F278 10000')"></i>
-                <div class="command-text">player.additem 0001F278 10000</div>
+                <div class="command-text">
+                    player.additem 0001F278 10000
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>10 mm</strong>
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
+                    10 mm
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 0001F276 10000')"></i>
-                <div class="command-text">player.additem 0001F276 10000</div>
+                <div class="command-text">
+                    player.additem 0001F276 10000
+                </div>
             </div>
-        </div>
 
-    </div>
-
-    <div class="row">
-
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>.308</strong>
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
+                    .308
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 0001F66B 10000')"></i>
-                <div class="command-text">player.additem 0001F66B 10000</div>
+                <div class="command-text">
+                    player.additem 0001F66B 10000
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>Misiles</strong>
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
+                    Misiles
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000CABA3 100')"></i>
-                <div class="command-text">player.additem 000CABA3 100</div>
+                <div class="command-text">
+                    player.additem 000CABA3 100
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>Mini Nukes</strong>
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
+                    Mini Nukes
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000E6B2E 10000')"></i>
-                <div class="command-text">player.additem 000E6B2E 10000</div>
+                <div class="command-text">
+                    player.additem 000E6B2E 10000
+                </div>
             </div>
-        </div>
 
-    </div>
-
-    <div class="row">
-
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>Harpoon</strong>
-                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000E6B2F 1000')"></i>
-                <div class="command-text">player.additem 000E6B2F 1000</div>
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
+                    Harpoon
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
+                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000E6B2F 10000')"></i>
+                <div class="command-text">
+                    player.additem 000E6B2F 10000
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>Gamma</strong>
-                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000DF279 1000')"></i>
-                <div class="command-text">player.additem 000DF279 1000</div>
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
+                    Gamma
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
+                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000DF279 10000')"></i>
+                <div class="command-text">
+                    player.additem 000DF279 10000
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="row-card">
-                <strong>Fusion Cells</strong>
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
+                    Fusion Cells
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
                 <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000C1897 10000')"></i>
-                <div class="command-text">player.additem 000C1897 10000</div>
+                <div class="command-text">
+                    player.additem 000C1897 10000
+                </div>
             </div>
-        </div>
 
+        </div>
     </div>
+
+    <!-- MENSAJE SIN RESULTADOS -->
+<div id="noResults" class="no-results">
+    <i class="bi bi-search"></i>
+    <h5>Sin resultados</h5>
+    <p>Intenta con otro término o cambia el filtro</p>
+</div>
 
     <footer class="footer-glass text-center mt-5">
         <p>© 2026 LuisEMarc — Fallout 4 Tools</p>
