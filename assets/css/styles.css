@@ -282,6 +282,82 @@ body {
   transform: scale(1.1);
 }
 
+/* HEADER MISIÓN */
+.mission-header {
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* BODY */
+.mission-body {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    margin-top: 5px;
+}
+
+/* HIGHLIGHT */
+.mission-highlight {
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(0,191,255,0.1);
+    color: #00bfff;
+    font-size: 14px;
+}
+
+/* FOOTER */
+.mission-footer {
+    margin-top: 8px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+}
+
+/* BADGE */
+.badge-mission {
+    background: rgba(0,191,255,0.2);
+    color: #00bfff;
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 11px;
+}
+
+/* ESPACIADO */
+.mission-card {
+    margin-bottom: 15px;
+}
+
+/* FILTER */
+.filter-container {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: rgba(255,255,255,0.05);
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: rgba(0,191,255,0.2);
+}
+
+.filter-btn.active {
+    background: rgba(0,191,255,0.25);
+    color: #00bfff;
+}
+
 /* DESKTOP */
 @media (min-width: 769px) {
   body {
