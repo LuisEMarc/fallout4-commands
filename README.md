@@ -62,7 +62,8 @@ Desarrollé una web app ligera que centraliza toda esta información en una sola
 ├─ assets/
 │ ├─ css/
 │ ├─ js/
-│ └─ img/
+│ └─ images/
+│    └─ companions/
 │
 └─ pages/
 ├─ missions_info.html
