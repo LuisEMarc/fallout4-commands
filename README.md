@@ -1,33 +1,61 @@
 # 🎮 Fallout 4 Tools
 
-Pequeña web app creada para tener acceso rápido a comandos, información útil y referencias dentro de Fallout 4 sin tener que estar buscando en múltiples sitios.
+Web app enfocada en mejorar la experiencia del jugador en Fallout 4 mediante acceso rápido a comandos, información clave y referencias útiles dentro del juego.
 
 ---
 
-## 🚀 Descripción
+## 🌐 Demo en vivo
 
-Este proyecto nace como una herramienta personal para mejorar la experiencia dentro del juego, centralizando:
-
-- 💰 Comandos útiles (chapas, munición, materiales, etc.)
-- 🧱 Materiales con IDs listos para copiar
-- 🔁 Misiones repetibles para no perder el seguimiento
-- 🧑‍🤝‍🧑 Acompañantes y las perks que otorgan al alcanzar afinidad máxima
-
-El objetivo es tener todo en un solo lugar, accesible y rápido.
+👉 https://LuisEMarc.github.io/fallout4-commands/
 
 ---
 
-## 🧩 Funcionalidades
+## 🧠 Problema
 
-- 📋 Copiar comandos con un solo clic
-- 🧊 Interfaz moderna estilo glass (inspirada en iOS)
-- 📱 Diseño responsive
-- 🖼 Vista previa de acompañantes en modal
-- 📚 Organización por secciones (Generales, Materiales, Municiones, etc.)
+Durante el juego, es común tener que buscar constantemente:
+
+- IDs de materiales o municiones
+- Comandos de consola
+- Información sobre acompañantes y perks
+- Misiones repetibles
+
+Esto interrumpe la experiencia y rompe el flujo de juego.
 
 ---
 
-## 🗂️ Estructura del proyecto
+## 💡 Solución
+
+Desarrollé una web app ligera que centraliza toda esta información en una sola interfaz:
+
+- 📋 Copia rápida de comandos (1 clic)
+- 🧱 Organización clara por categorías
+- 🧑‍🤝‍🧑 Información de acompañantes y perks
+- 🔁 Seguimiento de misiones repetibles
+- 🖼 Interacciones visuales (modales, feedback UI)
+
+---
+
+## 🚀 Funcionalidades destacadas
+
+- Sistema de copiado con feedback visual (toast)
+- Modal interactivo para vista ampliada de acompañantes
+- Interfaz moderna con efecto glassmorphism (estilo iOS)
+- Navbar responsive con navegación entre secciones
+- Estructura modular para fácil escalabilidad
+
+---
+
+## 🛠️ Stack tecnológico
+
+- HTML5
+- CSS3 (Glassmorphism + responsive design)
+- JavaScript (Vanilla)
+- Bootstrap
+- Bootstrap Icons
+
+---
+
+## 🧩 Arquitectura
 / (root)
 │ index.html
 │
@@ -42,32 +70,31 @@ El objetivo es tener todo en un solo lugar, accesible y rápido.
 
 ---
 
-## 🌐 Demo
+## 🎯 Enfoque técnico
 
-👉 https://LuisEMarc.github.io/fallout4-commands/
-
----
-
-## 🛠️ Tecnologías usadas
-
-- HTML5
-- CSS3 (Glassmorphism)
-- JavaScript
-- Bootstrap
-- Bootstrap Icons
+- Uso de atributos `data-*` para manejar contenido dinámico sin duplicación de HTML
+- Separación de lógica (JS), estilos (CSS) y estructura (HTML)
+- Manejo de eventos para mejorar UX (copiado, modales, interacción)
+- Diseño reutilizable entre páginas mediante estilos globales
 
 ---
 
-## 💡 Motivación
+## 📈 Aprendizajes clave
 
-La idea principal fue dejar de depender de múltiples páginas o búsquedas repetitivas y tener una herramienta rápida, práctica y visualmente agradable mientras se juega.
+- Implementación de UI moderna sin frameworks pesados
+- Mejora de experiencia de usuario con microinteracciones
+- Organización de proyecto tipo “mini app” escalable
+- Uso de Bootstrap de forma personalizada (no dependiente)
 
 ---
 
-## ⚠️ Nota
+## 🔮 Futuras mejoras
 
-Esta herramienta es de uso personal y educativo.  
-Los comandos están pensados para facilitar pruebas o experiencias dentro del juego.
+- 🔎 Buscador en tiempo real
+- ⭐ Sistema de favoritos
+- 🎛️ Tema alternativo estilo Pip-Boy
+- 📦 Expansión de contenido (armas, builds, armaduras)
+- 🌐 Migración a framework (React o Vue)
 
 ---
 
@@ -77,9 +104,7 @@ Los comandos están pensados para facilitar pruebas o experiencias dentro del ju
 
 ---
 
-## 🔥 Futuras mejoras
+## ⚠️ Nota
 
-- 🔎 Buscador en tiempo real
-- ⭐ Favoritos
-- 📦 Más contenido (armas, armaduras, builds)
-
+Proyecto con fines educativos y de uso personal.
+No afiliado con Bethesda.
