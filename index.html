@@ -300,6 +300,17 @@
 
             <div class="row-card command-card" data-category="ammo">
                 <div class="command-header">
+                    .44
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
+                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 0009221C 10000')"></i>
+                <div class="command-text">
+                    player.additem 0009221C 10000
+                </div>
+            </div>
+
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
                     5.56
                     <span class="badge-command badge-ammo">Munici&oacute;n</span>
                 </div>
@@ -355,17 +366,6 @@
 
             <div class="row-card command-card" data-category="ammo">
                 <div class="command-header">
-                    Harpoon
-                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
-                </div>
-                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem 000E6B2F 10000')"></i>
-                <div class="command-text">
-                    player.additem 000E6B2F 10000
-                </div>
-            </div>
-
-            <div class="row-card command-card" data-category="ammo">
-                <div class="command-header">
                     Gamma
                     <span class="badge-command badge-ammo">Munici&oacute;n</span>
                 </div>
@@ -386,15 +386,63 @@
                 </div>
             </div>
 
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
+                    7.62
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
+                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem XX037897 10000')"></i>
+                <div class="command-text">
+                    player.additem XX037897 10000
+                </div>
+                <div class="command-note">
+                    <i class="bi bi-info-circle"></i>
+                    Ten en cuenta que xx representa el orden de carga del DLC (generalmente 06, 07 u 08, debes
+                    verificarlo en tu juego).
+                </div>
+            </div>
+
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
+                    .45-70
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
+                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem XX02C8B1 10000')"></i>
+                <div class="command-text">
+                    player.additem XX02C8B1 10000
+                </div>
+                <div class="command-note">
+                    <i class="bi bi-info-circle"></i>
+                    Ten en cuenta que xx representa el orden de carga del DLC (generalmente 06, 07 u 08, debes
+                    verificarlo en tu juego).
+                </div>
+            </div>
+
+            <div class="row-card command-card" data-category="ammo">
+                <div class="command-header">
+                    Harpoon
+                    <span class="badge-command badge-ammo">Munici&oacute;n</span>
+                </div>
+                <i class="bi bi-clipboard copy-btn" onclick="copyText('player.additem XX010B81 10000')"></i>
+                <div class="command-text">
+                    player.additem XX010B81 10000
+                </div>
+                <div class="command-note">
+                    <i class="bi bi-info-circle"></i>
+                    Ten en cuenta que xx representa el orden de carga del DLC (generalmente 06, 07 u 08, debes
+                    verificarlo en tu juego).
+                </div>
+            </div>
+
         </div>
     </div>
 
     <!-- MENSAJE SIN RESULTADOS -->
-<div id="noResults" class="no-results">
-    <i class="bi bi-search"></i>
-    <h5>Sin resultados</h5>
-    <p>Intenta con otro término o cambia el filtro</p>
-</div>
+    <div id="noResults" class="no-results">
+        <i class="bi bi-search"></i>
+        <h5>Sin resultados</h5>
+        <p>Intenta con otro término o cambia el filtro</p>
+    </div>
 
     <footer class="footer-glass text-center mt-5">
         <p>© 2026 LuisEMarc — Fallout 4 Tools</p>
