@@ -68,7 +68,7 @@
     <div class="main-title d-flex align-items-center justify-content-center gap-3 mb-4">
         <img src="../assets/images/title.png" class="main-logo">
         <h1 class="m-0">
-            Cabez&oacute;nes Coleccionables
+            Bobbleheads
         </h1>
     </div>
 
@@ -78,13 +78,37 @@
     </div>
     <div class="section-bar"></div>
 
+<div class="floating-progress">
+
+    <div class="progress-text">
+        <span id="progressCount">
+            0 / 20 encontrados
+        </span>
+
+        <button id="resetProgress" class="reset-btn">
+            <i class="bi bi-trash"></i>
+        </button>
+    </div>
+
+    <div class="progress">
+        <div
+            id="progressBar"
+            class="progress-bar"
+        ></div>
+    </div>
+
+</div>
+
     <!-- ================= BOBBLEHEADS ================= -->
     <div class="bobbleheads-container">
 
         <!-- Strength -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="strength">
             <div class="command-header">
                 <span>Strength Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-special">
                     <span class="special-active special-s">S</span>.P.E.C.I.A.L
                 </span>
@@ -108,9 +132,12 @@
         </div>
 
         <!-- Perception -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="perception">
             <div class="command-header">
                 <span>Perception Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-special">
                     S.<span class="special-active special-p">P</span>.E.C.I.A.L
                 </span>
@@ -134,9 +161,12 @@
         </div>
 
         <!-- Endurance -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="endurance">
             <div class="command-header">
                 <span>Endurance Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-special">
                     S.P.<span class="special-active special-e">E</span>.C.I.A.L
                 </span>
@@ -160,9 +190,12 @@
         </div>
 
         <!-- Charisma -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="charisma">
             <div class="command-header">
                 <span>Charisma Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-special">
                     S.P.E.<span class="special-active special-c">C</span>.I.A.L
                 </span>
@@ -186,9 +219,12 @@
         </div>
 
         <!-- Intelligence -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="intelligence">
             <div class="command-header">
                 <span>Intelligence Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-special">
                     S.P.E.C.<span class="special-active special-i">I</span>.A.L
                 </span>
@@ -212,9 +248,12 @@
         </div>
 
         <!-- Agility -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="agility">
             <div class="command-header">
                 <span>Agility Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-special">
                     S.P.E.C.I.<span class="special-active special-s">A</span>.L
                 </span>
@@ -238,9 +277,12 @@
         </div>
 
         <!-- Luck -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="luck">
             <div class="command-header">
                 <span>Luck Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-special">
                     S.P.E.C.I.A.<span class="special-active special-l">L</span>
                 </span>
@@ -273,9 +315,12 @@
     <div class="bobbleheads-container">
 
         <!-- Barter -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="barter">
             <div class="command-header">
                 <span>Barter Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-material">
                     Comercio
                 </span>
@@ -299,9 +344,12 @@
         </div>
 
         <!-- Big Guns -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="bigguns">
             <div class="command-header">
                 <span>Big Guns Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-ammo">
                     Armas Pesadas
                 </span>
@@ -325,9 +373,12 @@
         </div>
 
         <!-- Energy Weapons -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="energy">
             <div class="command-header">
                 <span>Energy Weapons Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-ammo">
                     Energía
                 </span>
@@ -351,9 +402,12 @@
         </div>
 
         <!-- Explosives -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="explosives">
             <div class="command-header">
                 <span>Explosives Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-ammo">
                     Explosivos
                 </span>
@@ -377,9 +431,12 @@
         </div>
 
         <!-- Lock Picking -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="lockpick">
             <div class="command-header">
                 <span>Lock Picking Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-basic">
                     Utilidad
                 </span>
@@ -403,9 +460,12 @@
         </div>
 
         <!-- Medicine -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="medicine">
             <div class="command-header">
                 <span>Medicine Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-material">
                     Medicina
                 </span>
@@ -429,9 +489,12 @@
         </div>
 
         <!-- Melee -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="melee">
             <div class="command-header">
                 <span>Melee Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-ammo">
                     Melee
                 </span>
@@ -455,9 +518,12 @@
         </div>
 
         <!-- Repair -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="repair">
             <div class="command-header">
                 <span>Repair Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-material">
                     Reparación
                 </span>
@@ -481,9 +547,12 @@
         </div>
 
         <!-- Science -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="science">
             <div class="command-header">
                 <span>Science Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-material">
                     Ciencia
                 </span>
@@ -507,9 +576,12 @@
         </div>
 
         <!-- Small Guns -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="smallguns">
             <div class="command-header">
                 <span>Small Guns Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-ammo">
                     Armas
                 </span>
@@ -533,9 +605,12 @@
         </div>
 
         <!-- Sneak -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="sneak">
             <div class="command-header">
                 <span>Sneak Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-basic">
                     Sigilo
                 </span>
@@ -559,9 +634,12 @@
         </div>
 
         <!-- Speech -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="speech">
             <div class="command-header">
                 <span>Speech Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-basic">
                     Conversación
                 </span>
@@ -585,9 +663,12 @@
         </div>
 
         <!-- Unarmed -->
-        <div class="row-card command-card">
+        <div class="row-card command-card bobble-card" data-bobble="unarmed">
             <div class="command-header">
                 <span>Unarmed Bobblehead</span>
+                <div class="bobble-check">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
                 <span class="badge-command badge-ammo">
                     Desarmado
                 </span>
