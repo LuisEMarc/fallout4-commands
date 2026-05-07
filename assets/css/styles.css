@@ -545,6 +545,74 @@ body {
   color: #ff9ff3;
 }
 
+/* CHECKS BOBBLEHEADS */
+.bobble-check input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #00bfff;
+}
+
+.bobble-card.completed {
+  opacity: 0.7;
+  border: 1px solid rgba(0, 191, 255, 0.4);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.15);
+}
+
+/* PROGRESS BAR */
+.floating-progress {
+  position: sticky;
+  top: 90px;
+  z-index: 900;
+  padding: 10px 12px;
+  margin-bottom: 25px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+.progress {
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #00bfff, #4da3ff);
+  transition: width 0.3s ease;
+}
+
+.reset-btn {
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ff6b6b;
+  transition: all 0.2s ease;
+}
+
+.reset-btn:hover {
+  background: rgba(255, 107, 107, 0.15);
+  transform: scale(1.05);
+}
+
 /* DESKTOP */
 @media (min-width: 769px) {
   body {
@@ -577,6 +645,10 @@ body {
     padding-bottom: 20px;
   }
 
+  body {
+    padding-bottom: 220px;
+  }
+
   .footer-glass {
     margin-bottom: 100px;
   }
@@ -602,13 +674,10 @@ body {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-
     width: 90%;
     max-width: 500px;
-
     border-radius: 20px;
     padding: 10px 15px;
-
     z-index: 9999;
   }
 
@@ -665,5 +734,16 @@ body {
 
   .bobbleheads-container {
     grid-template-columns: 1fr;
+  }
+
+  /* PROGRESS BAR */
+  .floating-progress {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 0;
+    z-index: 9998;
   }
 }

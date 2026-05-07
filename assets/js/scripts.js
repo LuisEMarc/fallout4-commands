@@ -1,10 +1,33 @@
 // ============================
+// CONSTANTS
+// ============================
+
+const STORAGE_KEY = "vault_bobbleheads";
+
+const DLC_IMAGES = {
+  nuka: "../assets/images/nuka_world.png",
+  automatron: "../assets/images/automatron.png",
+};
+
+// ============================
+// HELPERS
+// ============================
+
+const $ = (selector) => document.querySelector(selector);
+
+const $$ = (selector) => document.querySelectorAll(selector);
+
+// ============================
 // COPY TO CLIPBOARD
 // ============================
+
 function copyText(text) {
   navigator.clipboard.writeText(text);
 
-  const toast = document.getElementById("copyToast");
+  const toast = $("#copyToast");
+
+  if (!toast) return;
+
   toast.classList.add("show");
 
   setTimeout(() => {
@@ -15,27 +38,40 @@ function copyText(text) {
 // ============================
 // INIT APP
 // ============================
+
 document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initModal();
   initFilters();
   initSearch();
+  initBobbleheads();
 });
 
 // ============================
 // NAVBAR
 // ============================
+
 function initNavbar() {
-  const nav = document.querySelector(".navbar-custom");
+  const nav = $(".navbar-custom");
 
-  window.addEventListener("scroll", () => {
-    nav.classList.toggle("scrolled", window.scrollY > 20);
-  });
+  if (nav) {
+    window.addEventListener("scroll", () => {
+      nav.classList.toggle("scrolled", window.scrollY > 20);
+    });
+  }
 
-  const currentPage = window.location.pathname.split("/").pop();
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-  document.querySelectorAll(".nav-link").forEach((link) => {
-    if (link.getAttribute("href").includes(currentPage)) {
+  $$(".nav-link").forEach((link) => {
+    const href = link.getAttribute("href");
+
+    const isHome =
+      currentPage === "index.html" && (href === "#" || href === "./");
+
+    const isCurrentPage =
+      currentPage !== "index.html" && href.includes(currentPage);
+
+    if (isHome || isCurrentPage) {
       link.classList.add("active");
     }
   });
@@ -44,40 +80,36 @@ function initNavbar() {
 // ============================
 // MODAL ACOMPAÑANTES
 // ============================
+
 function initModal() {
-  const modalElement = document.getElementById("imgModal");
-  if (!modalElement) return; // evita errores en otras páginas
+  const modalElement = $("#imgModal");
+
+  if (!modalElement) return;
 
   const modal = new bootstrap.Modal(modalElement);
 
-  const modalImage = document.getElementById("modalImage");
-  const modalName = document.getElementById("modalName");
-  const modalSkill = document.getElementById("modalSkill");
-  const modalAffinity = document.getElementById("modalAffinity");
-  const modalMission = document.getElementById("modalMission");
-  const modalBadge = document.getElementById("modalDlcBadge");
+  const modalImage = $("#modalImage");
+  const modalName = $("#modalName");
+  const modalSkill = $("#modalSkill");
+  const modalAffinity = $("#modalAffinity");
+  const modalMission = $("#modalMission");
+  const modalBadge = $("#modalDlcBadge");
 
-  document.querySelectorAll(".clickable-img").forEach((img) => {
+  $$(".clickable-img").forEach((img) => {
     img.addEventListener("click", () => {
-      // contenido
       modalImage.src = img.src;
-      modalName.textContent = "Nombre: " + img.dataset.name;
-      modalSkill.textContent = "Habilidad: " + img.dataset.skill;
+
+      modalName.textContent = `Nombre: ${img.dataset.name}`;
+      modalSkill.textContent = `Habilidad: ${img.dataset.skill}`;
+
       modalAffinity.textContent = img.dataset.affinity;
       modalMission.textContent = img.dataset.mission;
 
-      // DLC badge
       const dlc = img.dataset.dlc;
 
       if (dlc && modalBadge) {
         modalBadge.style.display = "block";
-
-        const dlcImages = {
-          nuka: "../assets/images/nuka_world.png",
-          automatron: "../assets/images/automatron.png",
-        };
-
-        modalBadge.src = dlcImages[dlc] || "";
+        modalBadge.src = DLC_IMAGES[dlc] || "";
       } else if (modalBadge) {
         modalBadge.style.display = "none";
       }
@@ -90,12 +122,15 @@ function initModal() {
 // ============================
 // FILTROS
 // ============================
+
 function initFilters() {
-  document.querySelectorAll(".filter-btn").forEach((btn) => {
+  const buttons = $$(".filter-btn");
+
+  if (!buttons.length) return;
+
+  buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      document
-        .querySelectorAll(".filter-btn")
-        .forEach((b) => b.classList.remove("active"));
+      buttons.forEach((b) => b.classList.remove("active"));
 
       btn.classList.add("active");
 
@@ -107,30 +142,35 @@ function initFilters() {
 // ============================
 // BUSCADOR
 // ============================
+
 function initSearch() {
-  const input = document.getElementById("searchInput");
+  const input = $("#searchInput");
+
   if (!input) return;
 
   input.addEventListener("input", updateView);
 }
 
 // ============================
-// CORE LOGIC (FILTRO + SEARCH)
+// CORE LOGIC
 // ============================
-function updateView() {
-  const searchInput = document.getElementById("searchInput");
-  const searchValue = searchInput ? searchInput.value.toLowerCase() : "";
 
-  const activeBtn = document.querySelector(".filter-btn.active");
-  const activeFilter = activeBtn ? activeBtn.dataset.filter : "all";
+function updateView() {
+  const searchValue = $("#searchInput")?.value.toLowerCase() || "";
+
+  const activeFilter = $(".filter-btn.active")?.dataset.filter || "all";
 
   let anyVisible = false;
 
-  // filtrar cards
-  document.querySelectorAll(".command-card").forEach((card) => {
+  // ============================
+  // FILTRAR CARDS
+  // ============================
+
+  $$(".command-card").forEach((card) => {
     const text = card.innerText.toLowerCase();
 
     const matchSearch = text.includes(searchValue);
+
     const matchFilter =
       activeFilter === "all" || card.dataset.category === activeFilter;
 
@@ -141,25 +181,137 @@ function updateView() {
     if (visible) anyVisible = true;
   });
 
-  // ocultar secciones vacías
-  document.querySelectorAll(".command-section").forEach((section) => {
+  // ============================
+  // OCULTAR SECCIONES VACÍAS
+  // ============================
+
+  $$(".command-section").forEach((section) => {
     const visibleCards = section.querySelectorAll(
-      '.command-card:not([style*="display: none"])'
+      '.command-card:not([style*="display: none"])',
     );
 
     section.style.display = visibleCards.length > 0 ? "block" : "none";
   });
 
-  // estado vacío
-  const noResults = document.getElementById("noResults");
-  if (noResults) {
-    noResults.style.display = anyVisible ? "none" : "block";
+  // ============================
+  // EMPTY STATE
+  // ============================
 
-    const text = noResults.querySelector("p");
-    if (text) {
-      text.textContent = searchValue
-        ? `No encontramos "${searchValue}"`
-        : "Cambia el filtro para ver resultados";
-    }
-  }
+  updateNoResults(anyVisible, searchValue);
+}
+
+// ============================
+// EMPTY STATE
+// ============================
+
+function updateNoResults(anyVisible, searchValue) {
+  const noResults = $("#noResults");
+
+  if (!noResults) return;
+
+  noResults.style.display = anyVisible ? "none" : "block";
+
+  const text = noResults.querySelector("p");
+
+  if (!text) return;
+
+  text.textContent = searchValue
+    ? `No encontramos "${searchValue}"`
+    : "Cambia el filtro para ver resultados";
+}
+
+// ============================
+// BOBBLEHEADS
+// ============================
+
+function initBobbleheads() {
+  loadBobbleProgress();
+  initResetProgress();
+}
+
+// ============================
+// LOAD PROGRESS
+// ============================
+
+function loadBobbleProgress() {
+  const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+
+  $$(".bobble-card").forEach((card) => {
+    const id = card.dataset.bobble?.trim().toLowerCase();
+
+    const checkbox = card.querySelector(".bobble-toggle");
+
+    // protección
+    if (!id || !checkbox) return;
+
+    // cargar estado guardado
+    const checked = saved[id] === true;
+
+    checkbox.checked = checked;
+
+    card.classList.toggle("completed", checked);
+
+    // escuchar cambios
+    checkbox.addEventListener("change", () => {
+      const currentData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+
+      currentData[id] = checkbox.checked;
+
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(currentData));
+
+      card.classList.toggle("completed", checkbox.checked);
+
+      updateProgress();
+    });
+  });
+
+  updateProgress();
+}
+
+// ============================
+// UPDATE PROGRESS
+// ============================
+
+function updateProgress() {
+  const progressCount = $("#progressCount");
+
+  const progressBar = $("#progressBar");
+
+  if (!progressCount || !progressBar) return;
+
+  const total = $$(".bobble-card").length;
+
+  const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+
+  const completed = Object.values(saved).filter(Boolean).length;
+
+  progressCount.textContent = `${completed} / ${total} encontrados`;
+
+  const percentage = total ? (completed / total) * 100 : 0;
+
+  progressBar.style.width = `${percentage}%`;
+}
+
+// ============================
+// RESET PROGRESS
+// ============================
+
+function initResetProgress() {
+  const resetBtn = $("#resetProgress");
+
+  if (!resetBtn) return;
+
+  resetBtn.addEventListener("click", () => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({}));
+
+    $$(".bobble-toggle").forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+
+    $$(".bobble-card").forEach((card) => {
+      card.classList.remove("completed");
+    });
+
+    updateProgress();
+  });
 }
