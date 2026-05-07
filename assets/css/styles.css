@@ -518,6 +518,13 @@ body {
     margin-bottom: 100px;
   }
 
+  body.modal-open .navbar-custom {
+    z-index: 1;
+    opacity: 0.3;
+    filter: blur(4px);
+    transition: all 0.2s ease;
+  }
+
   .main-logo {
     width: 45px;
     height: 45px;
