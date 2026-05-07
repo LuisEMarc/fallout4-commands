@@ -1,111 +1,190 @@
-# 🎮 Fallout 4 Tools
+# 🎮 Vault Assistant — Fallout 4 Companion Web App
 
-Web app enfocada en mejorar la experiencia del jugador en Fallout 4 mediante acceso rápido a comandos, información clave y referencias útiles dentro del juego.
+Aplicación web enfocada en mejorar la experiencia del jugador en Fallout 4 mediante acceso rápido a comandos, coleccionables, información estratégica y referencias útiles dentro del juego.
 
 ---
 
 ## 🌐 Demo en vivo
 
-👉 https://LuisEMarc.github.io/fallout4-commands/
+👉 https://luisemarc.github.io/fallout4-commands/
 
 ---
 
-## 🧠 Problema
+# 🧠 Problema
 
-Durante el juego, es común tener que buscar constantemente:
+Durante una partida de Fallout 4 es común interrumpir constantemente el juego para buscar información en múltiples sitios:
 
-- IDs de materiales o municiones
+- IDs de materiales y municiones
 - Comandos de consola
-- Información sobre acompañantes y perks
 - Misiones repetibles
+- Perks de acompañantes
+- Ubicación de Bobbleheads
+- Requisitos de afinidad
+- Beneficios útiles para builds
 
-Esto interrumpe la experiencia y rompe el flujo de juego.
-
----
-
-## 💡 Solución
-
-Desarrollé una web app ligera que centraliza toda esta información en una sola interfaz:
-
-- 📋 Copia rápida de comandos (1 clic)
-- 🧱 Organización clara por categorías
-- 🧑‍🤝‍🧑 Información de acompañantes y perks
-- 🔁 Seguimiento de misiones repetibles
-- 🖼 Interacciones visuales (modales, feedback UI)
+Esto rompe el flujo de exploración y hace lenta la toma de decisiones.
 
 ---
 
-## 🚀 Funcionalidades destacadas
+# 💡 Solución
 
-- Sistema de copiado con feedback visual (toast)
-- Modal interactivo para vista ampliada de acompañantes
-- Interfaz moderna con efecto glassmorphism (estilo iOS)
-- Navbar responsive con navegación entre secciones
-- Estructura modular para fácil escalabilidad
+Desarrollé una companion web app ligera y responsive que centraliza información importante del juego en una sola interfaz moderna y rápida de consultar.
+
+La aplicación permite:
+
+- 📋 Copiar comandos con un clic
+- 🔁 Consultar misiones repetibles por facción
+- 🧑‍🤝‍🧑 Revisar perks y afinidad de acompañantes
+- 🎯 Ver ubicación y beneficios de Bobbleheads
+- 🔎 Filtrar y buscar contenido dinámicamente
+- 📱 Navegar cómodamente desde desktop o mobile
 
 ---
 
-## 🛠️ Stack tecnológico
+# 🚀 Funcionalidades destacadas
+
+## 📋 Sistema de comandos
+- Organización por categorías
+- Copiado instantáneo al portapapeles
+- Feedback visual mediante toast notifications
+- Badges visuales por tipo de comando
+
+## 🧑‍🤝‍🧑 Sistema de acompañantes
+- Vista detallada mediante modales
+- Información de perks únicas
+- Requisitos de afinidad
+- Misiones obligatorias para progreso
+- Etiquetas visuales para DLCs
+
+## 🔁 Misiones repetibles
+- Organización por facciones:
+  - Minutemen
+  - Railroad
+  - Brotherhood of Steel
+  - Institute
+- Filtros dinámicos
+- Diseño modular por secciones
+
+## 🎯 Bobbleheads
+- Listado completo de los 20 Bobbleheads
+- Diferenciación entre:
+  - SPECIAL
+  - Skills
+- Ubicaciones detalladas
+- Beneficios permanentes
+- Sistema visual de badges personalizados
+
+---
+
+# 🎨 UI / UX
+
+La aplicación utiliza un diseño moderno inspirado en:
+- Glassmorphism
+- Interfaces móviles estilo iOS
+- Companion apps gaming
+
+Características visuales:
+- Navbar flotante responsive
+- Blur dinámico
+- Modales interactivos
+- Cards translúcidas
+- Navegación optimizada para mobile
+- Microinteracciones y animaciones suaves
+
+---
+
+# 🛠️ Stack tecnológico
 
 - HTML5
-- CSS3 (Glassmorphism + responsive design)
+- CSS3
 - JavaScript (Vanilla)
-- Bootstrap
+- Bootstrap 5
 - Bootstrap Icons
 
 ---
 
-## 🧩 Arquitectura
-/ (root)
-│ index.html
+# 🧩 Arquitectura
+
+/
+│
+├─ index.html
 │
 ├─ assets/
-│ ├─ css/
-│ ├─ js/
-│ └─ images/
-│    └─ companions/
+│   ├─ css/
+│   ├─ js/
+│   └─ images/
+│       ├─ bobbleheads/
+│       ├─ companions/
 │
 └─ pages/
-├─ missions_info.html
-└─ companions.html
+    ├─ companions.html
+    ├─ missions_info.html
+    └─ bobbleheads.html
 
----
+# ⚙️ Enfoque Técnico
 
-## 🎯 Enfoque técnico
+Organización modular
 
-- Uso de atributos `data-*` para manejar contenido dinámico sin duplicación de HTML
-- Separación de lógica (JS), estilos (CSS) y estructura (HTML)
-- Manejo de eventos para mejorar UX (copiado, modales, interacción)
-- Diseño reutilizable entre páginas mediante estilos globales
+Separación clara entre:
 
----
+- estructura (HTML)
+- estilos (CSS)
+- lógica (JavaScript)
+- Reutilización visual
 
-## 📈 Aprendizajes clave
+Uso de componentes reutilizables:
 
-- Implementación de UI moderna sin frameworks pesados
-- Mejora de experiencia de usuario con microinteracciones
-- Organización de proyecto tipo “mini app” escalable
-- Uso de Bootstrap de forma personalizada (no dependiente)
+- cards
+- badges
+- modales
+- navbar
+- filtros
 
----
+UX dinámica
 
-## 🔮 Futuras mejoras
+- Filtrado en tiempo real
+- Ocultado automático de secciones vacías
+- Sistema de búsqueda dinámica
+- Navegación responsive optimizada
 
-- 🔎 Buscador en tiempo real
+Contenido dinámico
+
+Uso de atributos data-* para:
+
+- modales
+- información contextual
+- contenido reutilizable
+
+# 📈 Aprendizaje clave
+
+- Diseño responsive mobile-first
+- Glassmorphism moderno usando CSS puro
+- Optimización UX para companion apps
+- Manejo dinámico del DOM con Vanilla JS
+- Arquitectura escalable sin frameworks
+- Personalización avanzada de Bootstrap
+
+# 🔮 Futuras mejoras
+
 - ⭐ Sistema de favoritos
+- ✅ Checklist de Bobbleheads encontrados
+- 💾 Persistencia con LocalStorage
+- 🔎 Buscador global avanzado
+- 📬 Sistema de feedback
 - 🎛️ Tema alternativo estilo Pip-Boy
-- 📦 Expansión de contenido (armas, builds, armaduras)
-- 🌐 Migración a framework (React o Vue)
+- 📦 Expansión de contenido:
+    - armaduras
+    - armas legendarias
+    - settlements
+    - builds
+- ⚛️ Migración futura a React o Vue
 
----
+# 👤 Autor
 
-## 👤 Autor
+LuisEMarc
+Desarrollador de software apasionado por UI/UX, videojuegos y herramientas útiles enfocadas en experiencia de usuario.
 
-**LuisEMarc**
+# ⚠️ Notas
 
----
-
-## ⚠️ Nota
-
-Proyecto con fines educativos y de uso personal.
-No afiliado con Bethesda.
+Proyecto desarrollado con fines educativos y personales.
+Fallout 4 y sus recursos pertenecen a Bethesda Softworks.
