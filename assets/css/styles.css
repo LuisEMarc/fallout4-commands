@@ -484,6 +484,67 @@ body {
   }
 }
 
+/* BOBBLEHEADS */
+.bobblehead-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px;
+}
+
+.bobbleheads-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* SPECIAL BADGES */
+/* SPECIAL BADGE */
+.badge-special {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+
+  font-weight: 600;
+}
+
+/* LETRA RESALTADA */
+.special-active {
+  font-weight: 700;
+  text-shadow: 0 0 8px currentColor;
+}
+
+/* COLORES POR ATRIBUTO */
+.special-s {
+  color: #ff6b6b;
+}
+
+.special-p {
+  color: #5dade2;
+}
+
+.special-e {
+  color: #58d68d;
+}
+
+.special-c {
+  color: #f4d03f;
+}
+
+.special-i {
+  color: #bb8fce;
+}
+
+.special-a {
+  color: #48c9b0;
+}
+
+.special-l {
+  color: #ff9ff3;
+}
+
 /* DESKTOP */
 @media (min-width: 769px) {
   body {
@@ -600,5 +661,9 @@ body {
 
   .command-text {
     font-size: 12px;
+  }
+
+  .bobbleheads-container {
+    grid-template-columns: 1fr;
   }
 }
