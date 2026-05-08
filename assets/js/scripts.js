@@ -97,14 +97,16 @@ function initModal() {
   const modalAffinity = $("#modalAffinity");
   const modalMission = $("#modalMission");
   const modalBadge = $("#modalDlcBadge");
+  const modalDescription = $("#modalDescription");
+  const modalSubtitle = $("#modalSubtitle");
 
   $$(".clickable-img").forEach((img) => {
     img.addEventListener("click", () => {
       modalImage.src = img.src;
-
-      modalName.textContent = `Nombre: ${img.dataset.name}`;
-      modalSkill.textContent = `Habilidad: ${img.dataset.skill}`;
-
+      modalName.textContent = img.dataset.name;
+      modalSkill.textContent = img.dataset.skill;
+      modalSubtitle.textContent = img.dataset.type;
+      modalDescription.textContent = img.dataset.description;
       modalAffinity.textContent = img.dataset.affinity;
       modalMission.textContent = img.dataset.mission;
 
