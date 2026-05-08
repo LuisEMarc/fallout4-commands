@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initFilters();
   initSearch();
   initBobbleheads();
+  initBobbleLocationModal();
+  initFloatingUI();
 });
 
 // ============================
@@ -313,5 +315,49 @@ function initResetProgress() {
     });
 
     updateProgress();
+  });
+}
+
+// ============================
+// MODAL LOCATIONS
+// ============================
+function initBobbleLocationModal() {
+  const modalElement = $("#locationModal");
+
+  if (!modalElement) return;
+
+  const modal = new bootstrap.Modal(modalElement);
+
+  const locationImage = $("#locationImage");
+
+  $$(".bobblehead-img").forEach((img) => {
+    img.addEventListener("click", () => {
+      const location = img.dataset.location;
+
+      if (!location) return;
+
+      locationImage.src = `../assets/images/bobbleheads/locations/${location}`;
+
+      modal.show();
+    });
+  });
+}
+
+// ============================
+// FLOATING BAR BEHAVIOR
+// ============================
+function initFloatingUI() {
+  const floatingProgress = $(".floating-progress");
+
+  if (!floatingProgress) return;
+
+  document.querySelectorAll(".modal").forEach((modal) => {
+    modal.addEventListener("show.bs.modal", () => {
+      floatingProgress.classList.add("hidden-ui");
+    });
+
+    modal.addEventListener("hidden.bs.modal", () => {
+      floatingProgress.classList.remove("hidden-ui");
+    });
   });
 }

@@ -45,7 +45,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="companions.html">
                         <i class="bi bi-people"></i>
-                        <span class="nav-text">Acompañantes</span>
+                        <span class="nav-text">Compa&ntilde;eros</span>
                     </a>
                 </li>
 
@@ -78,26 +78,23 @@
     </div>
     <div class="section-bar"></div>
 
-<div class="floating-progress">
+    <div class="floating-progress">
 
-    <div class="progress-text">
-        <span id="progressCount">
-            0 / 20 encontrados
-        </span>
+        <div class="progress-text">
+            <span id="progressCount">
+                0 / 20 encontrados
+            </span>
 
-        <button id="resetProgress" class="reset-btn">
-            <i class="bi bi-trash"></i>
-        </button>
+            <button id="resetProgress" class="reset-btn">
+                <i class="bi bi-trash"></i>
+            </button>
+        </div>
+
+        <div class="progress">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+
     </div>
-
-    <div class="progress">
-        <div
-            id="progressBar"
-            class="progress-bar"
-        ></div>
-    </div>
-
-</div>
 
     <!-- ================= BOBBLEHEADS ================= -->
     <div class="bobbleheads-container">
@@ -106,15 +103,13 @@
         <div class="row-card command-card bobble-card" data-bobble="strength">
             <div class="command-header">
                 <span>Strength Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-special">
                     <span class="special-active special-s">S</span>.P.E.C.I.A.L
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/strength.png" class="bobblehead-img" alt="Strength">
+                <img src="../assets/images/bobbleheads/strength.png" class="bobblehead-img" alt="Strength"
+                    data-location="strength.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -126,8 +121,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +1 Strength permanentemente.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -135,15 +133,13 @@
         <div class="row-card command-card bobble-card" data-bobble="perception">
             <div class="command-header">
                 <span>Perception Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-special">
                     S.<span class="special-active special-p">P</span>.E.C.I.A.L
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/perception.png" class="bobblehead-img" alt="Perception">
+                <img src="../assets/images/bobbleheads/perception.png" class="bobblehead-img" alt="Perception"
+                    data-location="perception.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -155,8 +151,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +1 Perception permanentemente.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -164,15 +163,13 @@
         <div class="row-card command-card bobble-card" data-bobble="endurance">
             <div class="command-header">
                 <span>Endurance Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-special">
                     S.P.<span class="special-active special-e">E</span>.C.I.A.L
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/endurance.png" class="bobblehead-img" alt="Endurance">
+                <img src="../assets/images/bobbleheads/endurance.png" class="bobblehead-img" alt="Endurance"
+                    data-location="endurance.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -184,8 +181,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +1 Endurance permanentemente.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -193,15 +193,13 @@
         <div class="row-card command-card bobble-card" data-bobble="charisma">
             <div class="command-header">
                 <span>Charisma Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-special">
                     S.P.E.<span class="special-active special-c">C</span>.I.A.L
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/charisma.png" class="bobblehead-img" alt="Charisma">
+                <img src="../assets/images/bobbleheads/charisma.png" class="bobblehead-img" alt="Charisma"
+                    data-location="charisma.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -213,8 +211,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +1 Charisma permanentemente.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -222,15 +223,13 @@
         <div class="row-card command-card bobble-card" data-bobble="intelligence">
             <div class="command-header">
                 <span>Intelligence Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-special">
                     S.P.E.C.<span class="special-active special-i">I</span>.A.L
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/intelligence.png" class="bobblehead-img" alt="Intelligence">
+                <img src="../assets/images/bobbleheads/intelligence.png" class="bobblehead-img" alt="Intelligence"
+                    data-location="intelligence.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -242,8 +241,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +1 Intelligence permanentemente.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -251,15 +253,13 @@
         <div class="row-card command-card bobble-card" data-bobble="agility">
             <div class="command-header">
                 <span>Agility Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-special">
                     S.P.E.C.I.<span class="special-active special-s">A</span>.L
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/agility.png" class="bobblehead-img" alt="Agility">
+                <img src="../assets/images/bobbleheads/agility.png" class="bobblehead-img" alt="Agility"
+                    data-location="agility.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -271,8 +271,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +1 Agility permanentemente.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -280,15 +283,13 @@
         <div class="row-card command-card bobble-card" data-bobble="luck">
             <div class="command-header">
                 <span>Luck Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-special">
                     S.P.E.C.I.A.<span class="special-active special-l">L</span>
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/luck.png" class="bobblehead-img" alt="Luck">
+                <img src="../assets/images/bobbleheads/luck.png" class="bobblehead-img" alt="Luck"
+                    data-location="luck.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -300,8 +301,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +1 Luck permanentemente.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -318,15 +322,13 @@
         <div class="row-card command-card bobble-card" data-bobble="barter">
             <div class="command-header">
                 <span>Barter Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-material">
                     Comercio
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/barter.png" class="bobblehead-img" alt="Barter">
+                <img src="../assets/images/bobbleheads/barter.png" class="bobblehead-img" alt="Barter"
+                    data-location="barter.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -338,8 +340,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 Los vendedores tienen mejores precios.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -347,15 +352,13 @@
         <div class="row-card command-card bobble-card" data-bobble="bigguns">
             <div class="command-header">
                 <span>Big Guns Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-ammo">
                     Armas Pesadas
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/bigguns.png" class="bobblehead-img" alt="Big Guns">
+                <img src="../assets/images/bobbleheads/bigguns.png" class="bobblehead-img" alt="Big Guns"
+                    data-location="bigguns.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -367,8 +370,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +25% daño crítico con armas pesadas.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -376,15 +382,13 @@
         <div class="row-card command-card bobble-card" data-bobble="energy">
             <div class="command-header">
                 <span>Energy Weapons Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-ammo">
                     Energía
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/energy.png" class="bobblehead-img" alt="Energy Weapons">
+                <img src="../assets/images/bobbleheads/energy.png" class="bobblehead-img" alt="Energy Weapons"
+                    data-location="energy.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -396,8 +400,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +25% daño crítico con armas de energía.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -405,15 +412,13 @@
         <div class="row-card command-card bobble-card" data-bobble="explosives">
             <div class="command-header">
                 <span>Explosives Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-ammo">
                     Explosivos
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/explosives.png" class="bobblehead-img" alt="Explosives">
+                <img src="../assets/images/bobbleheads/explosives.png" class="bobblehead-img" alt="Explosives"
+                    data-location="explosives.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -425,8 +430,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +15% radio de explosión.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -434,15 +442,13 @@
         <div class="row-card command-card bobble-card" data-bobble="lockpick">
             <div class="command-header">
                 <span>Lock Picking Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-basic">
                     Utilidad
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/lockpick.png" class="bobblehead-img" alt="Lock Picking">
+                <img src="../assets/images/bobbleheads/lockpick.png" class="bobblehead-img" alt="Lock Picking"
+                    data-location="lockpick.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -454,8 +460,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 Las ganzúas son 10% más fáciles.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -463,15 +472,13 @@
         <div class="row-card command-card bobble-card" data-bobble="medicine">
             <div class="command-header">
                 <span>Medicine Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-material">
                     Medicina
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/medicine.png" class="bobblehead-img" alt="Medicine">
+                <img src="../assets/images/bobbleheads/medicine.png" class="bobblehead-img" alt="Medicine"
+                    data-location="medicine.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -483,8 +490,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 Los Stimpaks curan 10% más.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -492,15 +502,13 @@
         <div class="row-card command-card bobble-card" data-bobble="melee">
             <div class="command-header">
                 <span>Melee Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-ammo">
                     Melee
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/melee.png" class="bobblehead-img" alt="Melee">
+                <img src="../assets/images/bobbleheads/melee.png" class="bobblehead-img" alt="Melee"
+                    data-location="melee.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -512,8 +520,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +25% daño crítico melee.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -521,15 +532,13 @@
         <div class="row-card command-card bobble-card" data-bobble="repair">
             <div class="command-header">
                 <span>Repair Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-material">
                     Reparación
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/repair.png" class="bobblehead-img" alt="Repair">
+                <img src="../assets/images/bobbleheads/repair.png" class="bobblehead-img" alt="Repair"
+                    data-location="repair.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -541,8 +550,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 Los Fusion Cores duran 10% más.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -550,15 +562,13 @@
         <div class="row-card command-card bobble-card" data-bobble="science">
             <div class="command-header">
                 <span>Science Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-material">
                     Ciencia
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/science.png" class="bobblehead-img" alt="Science">
+                <img src="../assets/images/bobbleheads/science.png" class="bobblehead-img" alt="Science"
+                    data-location="science.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -570,8 +580,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +1 intento extra al hackear terminales.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -579,15 +592,13 @@
         <div class="row-card command-card bobble-card" data-bobble="smallguns">
             <div class="command-header">
                 <span>Small Guns Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-ammo">
                     Armas
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/smallguns.png" class="bobblehead-img" alt="Small Guns">
+                <img src="../assets/images/bobbleheads/smallguns.png" class="bobblehead-img" alt="Small Guns"
+                    data-location="smallguns.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -599,8 +610,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +25% daño crítico con armas balísticas.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -608,15 +622,13 @@
         <div class="row-card command-card bobble-card" data-bobble="sneak">
             <div class="command-header">
                 <span>Sneak Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-basic">
                     Sigilo
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/sneak.png" class="bobblehead-img" alt="Sneak">
+                <img src="../assets/images/bobbleheads/sneak.png" class="bobblehead-img" alt="Sneak"
+                    data-location="sneak.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -628,8 +640,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +10% más difícil de detectar.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -637,15 +652,13 @@
         <div class="row-card command-card bobble-card" data-bobble="speech">
             <div class="command-header">
                 <span>Speech Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-basic">
                     Conversación
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/speech.png" class="bobblehead-img" alt="Speech">
+                <img src="../assets/images/bobbleheads/speech.png" class="bobblehead-img" alt="Speech"
+                    data-location="speech.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -657,8 +670,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 Mejor probabilidad en diálogos.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -666,15 +682,13 @@
         <div class="row-card command-card bobble-card" data-bobble="unarmed">
             <div class="command-header">
                 <span>Unarmed Bobblehead</span>
-                <div class="bobble-check">
-                    <input type="checkbox" class="bobble-toggle">
-                </div>
                 <span class="badge-command badge-ammo">
                     Desarmado
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3 mt-3">
-                <img src="../assets/images/bobbleheads/unarmed.png" class="bobblehead-img" alt="Unarmed">
+                <img src="../assets/images/bobbleheads/unarmed.png" class="bobblehead-img" alt="Unarmed"
+                    data-location="unarmed.jpg">
                 <div>
                     <div class="mission-body">
                         <strong>📍 Ubicación:</strong><br>
@@ -686,8 +700,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mission-highlight mt-3">
+            <div class="bobble-footer mt-3">
                 +25% daño crítico desarmado.
+                <div class="bobble-status">
+                    <input type="checkbox" class="bobble-toggle">
+                </div>
             </div>
         </div>
 
@@ -697,6 +714,20 @@
     <footer class="footer-glass text-center mt-5">
         <p>© 2026 LuisEMarc — Fallout 4 Tools</p>
     </footer>
+
+    <!-- MODAL LOCATIONS -->
+    <div class="modal fade" id="locationModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-glass">
+
+                <div class="modal-body text-center p-3">
+
+                    <img id="locationImage" class="img-fluid location-modal-img" src="" alt="Ubicación Bobblehead">
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JS -->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>

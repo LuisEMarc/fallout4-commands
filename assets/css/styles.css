@@ -502,7 +502,6 @@ body {
 }
 
 /* SPECIAL BADGES */
-/* SPECIAL BADGE */
 .badge-special {
   background: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.6);
@@ -546,17 +545,55 @@ body {
 }
 
 /* CHECKS BOBBLEHEADS */
-.bobble-check input {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
+.bobble-card {
+  position: relative;
+}
+
+.bobble-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(0, 191, 255, 0.1);
+  color: #00bfff;
+  font-size: 14px;
+}
+
+.bobble-status {
+  flex-shrink: 0;
+  transform: translateY(2px);
+}
+
+.bobble-toggle {
+  width: 24px;
+  height: 24px;
   accent-color: #00bfff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  transform: translateY(2px);
+}
+
+.bobble-toggle:hover {
+  transform: scale(1.15);
 }
 
 .bobble-card.completed {
   opacity: 0.7;
-  border: 1px solid rgba(0, 191, 255, 0.4);
-  box-shadow: 0 0 15px rgba(0, 191, 255, 0.15);
+  border: 1px solid rgba(0, 191, 255, 0.35);
+  box-shadow:
+    0 0 20px rgba(0, 191, 255, 0.15),
+    0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.bobble-card.completed .mission-highlight {
+  background: rgba(0, 191, 255, 0.18);
+}
+
+.bobble-toggle:checked {
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
 }
 
 /* PROGRESS BAR */
@@ -611,6 +648,35 @@ body {
 .reset-btn:hover {
   background: rgba(255, 107, 107, 0.15);
   transform: scale(1.05);
+}
+
+/* MODAL LOCATIONS */
+.location-modal-img {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.bobblehead-img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.bobblehead-img:hover {
+  transform: scale(1.08);
+}
+
+.hidden-ui {
+  opacity: 0;
+  pointer-events: none;
+
+  transform: translateY(20px);
+
+  transition: all 0.25s ease;
 }
 
 /* DESKTOP */
@@ -744,6 +810,6 @@ body {
     width: 90%;
     max-width: 500px;
     margin-bottom: 0;
-    z-index: 9998;
+    z-index: 1000;
   }
 }
