@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initBobbleheads();
   initBobbleLocationModal();
   initFloatingUI();
+  initBobbleHint();
 });
 
 // ============================
@@ -360,4 +361,16 @@ function initFloatingUI() {
       floatingProgress.classList.remove("hidden-ui");
     });
   });
+}
+
+// ============================
+// HINT TOAST
+// ============================
+function initBobbleHint() {
+  const hint = $("#bobbleHint");
+  if (!hint) return;
+  hint.classList.add("show");
+  setTimeout(() => {
+    hint.classList.remove("show");
+  }, 10000);
 }

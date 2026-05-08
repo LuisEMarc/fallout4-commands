@@ -673,10 +673,40 @@ body {
 .hidden-ui {
   opacity: 0;
   pointer-events: none;
-
   transform: translateY(20px);
-
   transition: all 0.25s ease;
+}
+
+/* HINT TOAST */
+.hint-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: min(90%, 420px);
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: rgba(255, 193, 7, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffe082;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(40px);
+  transition: all 0.4s ease;
+  z-index: 2000;
+}
+
+.hint-toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hint-toast i {
+  margin-right: 8px;
 }
 
 /* DESKTOP */
@@ -811,5 +841,17 @@ body {
     max-width: 500px;
     margin-bottom: 0;
     z-index: 1000;
+  }
+
+  /* HINT TOAST MOBILE */
+  .hint-toast {
+    right: 50%;
+    transform: translateX(50%) translateY(20px);
+    width: 90%;
+    font-size: 13px;
+  }
+
+  .hint-toast.show {
+    transform: translateX(50%) translateY(0);
   }
 }
