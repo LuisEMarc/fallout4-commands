@@ -659,7 +659,7 @@ body {
 /* HINT TOAST */
 .hint-toast {
   position: fixed;
-  top: 20px;
+  top: 95px;
   right: 20px;
   width: min(90%, 420px);
   padding: 14px 18px;
@@ -986,6 +986,7 @@ body {
     transform: translateX(50%) translateY(20px);
     width: 90%;
     font-size: 13px;
+    top: 20px;
   }
 
   .hint-toast.show {
